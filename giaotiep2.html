@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Giao tiếp 2</title>
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="c/c.css">
+</head>
+<body class="w640">
+	<script type="text/javascript" src="j/j.js"></script>
+	<script type="text/javascript" src="j/menuhead.js"></script>
+	<script type="text/javascript" src="j/menu.js"></script>
+	<script>
+		$(document).ready( function(){
+
+			$(".tit2").each( function(){
+				var txt = $(this).text();
+				var id = $(this).attr("id");
+				$("#chude").append(new Option(txt, id));
+			})
+
+			$(document).on("change", "#chude" , function() {
+				var id = $(this).val();
+				$('html, body').animate({scrollTop:$('#'+id).position().top - 100}, 'slow');
+			});
+
+			$(window).bind('scroll', function () {
+				if ($(window).scrollTop() > 150) {
+					$('#chude').addClass('fixed');
+				} else {
+					$('#chude').removeClass('fixed');
+				}
+			});
+
+		})
+	</script>
+	<style>
+		td.tit2+td{ display: none; }
+		#chude{ display: block; padding: 10px; font-size: 0.8rem; width: 98%; margin: 0 0 0.5rem 0;  }
+		#chude option{ font-size: 0.8rem; }
+		#chude.fixed{ top:0; left: 0; z-index: 99; position: fixed; }
+	</style>
+	<div id="content">
+		<p style="padding: 0.3rem;">Lưu ý: trên Xiwang nên sử dụng các sticker và các emotion để cho cuộc trò chuyện thêm sinh động.</p>
+		<p style="padding: 0.3rem;">Khi đã chọn được câu cần dùng, click đúp (trên PC) hoặc chạm 2 lần (trên ĐT) vào câu đó, nếu chuyển màu xanh lam là đã copy thành công.</p>
+		<h2 class="tit">Tình huống hay gặp</h2>
+
+		<select id="chude">
+			<option value="">Chọn chủ đề</option>
+		</select>
+
+	 <table id="tblList">
+	<tbody>
+		<tr>
+			<td id="p1" class="tit2" colspan="3">Câu thường gặp</td>
+		</tr>
+		<tr>
+			<td>我是外国人，我的汉语不太好，所以在用翻译软件跟您聊天，如果我有说的不对的地方请您原谅。</td>
+			<td>Tôi là người nước ngoài, tôi đang sử dụng phần mềm dịch thuật để trò chuyện với bạn, xin vui lòng thông cảm cho tôi nếu tôi mắc lỗi</td>
+		</tr>
+		<tr>
+			<td>真诚发给您大陆看不到的真相网站。万古机缘，请珍贵</td>
+			<td>Chân thành gửi cho bạn các thông tin chân thật mà bạn không thể thấy ở Trung Quốc đại lục. Cơ duyên quý giá xin hãy trân quý</td>
+		</tr>
+		<tr>
+			<td>我们今天能见面是有缘的，我送您和家人有益和重要的消息.</td>
+			<td>Chúng ta gặp nhau hôm nay có thể cũng là có duyên, tôi tặng bạn những thông tin hữu ích và quan trọng với bạn cùng gia đình</td>
+		</tr>
+		<tr>
+			<td>你加入我们群组，好吗？</td>
+			<td>Bạn vào nhóm của chúng tôi nhé!</td>
+		</tr>
+		<tr>
+			<td>怎么了？你看完我发给你的这些重要消息了嘛？</td>
+			<td>Bạn thế nào rồi, đã đọc hết những thông tin hữu ích và quan trọng mà tôi gửi chưa?</td>
+		</tr>
+		<tr>
+			<td>你可不可以上这些网站？</td>
+			<td>Bạn có vào được các trang web này không!</td>
+		</tr>
+		<tr>
+			<td>我改天再给你打，祝你幸运.</td>
+			<td>Lúc khác tôi sẽ gọi lại cho ban nhé, chúc bạn may mắn.</td>
+		</tr>
+		<tr>
+			<td>你好 ！</td>
+			<td>Xin chào bạn .</td>
+		</tr>
+		<tr>
+			<td>你可不可以上这些网站？</td>
+			<td>Bạn có vào được các trang web này không!</td>
+		</tr>
+		<tr>
+			<td>你打开这些个链接看一看。</td>
+			<td>Bạn hãy mở những link trên xem xem</td>
+		</tr>
+		<tr>
+			<td>请告诉您身边的人也读这些信息，他们也会平安</td>
+			<td>Hãy giúp mọi người xung quanh bạn đọc được những thông tin này nhé, họ cũng sẽ được bình an.</td>
+		</tr>
+		<tr>
+			<td>如果打不开，你就试试这个链接吧</td>
+			<td>Nếu không vào được hãy thử vào cái này</td>
+		</tr>
+		<tr>
+			<td>送您有意义的信息，您仔细看，有需要可以跟我聊哦。</td>
+			<td>Tặng bạn những thông tin hữu ích, bạn đọc kỹ rồi có thắc mắc gì chát lại với tôi nhé,</td>
+		</tr>
+		<tr>
+			<td>我是一名海外志愿者，我每天都利用业余时间与中国大陆人分享被中共封锁了的信息。</td>
+			<td>Tôi là một tình nguyện viên người nước ngoài, hàng ngày tôi tranh thủ thời gian rảnh để chia sẻ với người Trung Quốc Đại Lục về những thông tin mà trong nước các bạn không được tiếp xúc đến.</td>
+		</tr>
+		<tr>
+			<td>您好。可以和您聊天吗？我先介绍一下，我是南方人</td>
+			<td>Có thể cùng bạn trò chuyện không ạ？Tôi xin giới thiệu, tôi là người phương Nam</td>
+		</tr>
+		<tr>
+			<td>我是一位外国人，目前在学习中文。我现在是从海外发短信给您。</td>
+			<td>Tôi là một người học tiếng Trung Quốc và tôi đang gửi cho bạn một tin nhắn từ nước ngoài.</td>
+		</tr>
+		<tr>
+			<td>你进得去这群吗？</td>
+			<td>Bạn có vào được nhóm này không?</td>
+		</tr>
+		<tr>
+			<td>我们继续聊聊啊！</td>
+			<td>Chúng ta nói chuyện tiếp nhé</td>
+		</tr>
+		<tr>
+			<td>冒昧打扰了 好群邀请大家！这个群传递真诚，弘扬善良；拓宽心胸，增加智慧！希望对您有所帮助，更多精彩，请加➕名片进群。</td>
+			<td>Mạo muội làm phiền một chút, có nhóm hay mời mọi người. Nhóm này truyền chân tướng, hồng dương thiện lương, dang rộng tấm lòng, tang cường trí huệ! Hi vọng có thể hỗ trợ bạn, để đón nhận nhiều điều hấp dẫn hơn, hãy thêm danh thiếp này vào nhóm.</td>
+		</tr>
+		<tr>
+			<td>我是越南人</td>
+			<td>Tôi là người Việt Nam</td>
+		</tr>
+		<tr>
+			<td>我是一名海外志愿者，我每天都利用业余时间与中国大陆人分享被中共封锁了的信息。</td>
+			<td>Tôi là một tình nguyện viên người nước ngoài, hàng ngày tôi tranh thủ thời gian rảnh để chia sẻ với người Trung Quốc Đại Lục về những thông tin mà trong nước các bạn không được tiếp xúc đến.</td>
+		</tr>
+		<tr>
+			<td>正忙吗，那我改天再打啊</td>
+			<td>Bạn đang bận à, lúc khác tôi sẽ gọi lại cho bạn nhé.</td>
+		</tr>
+		<tr>
+			<td>你有中国人群吗，拉我进去交流交流哦</td>
+			<td>Bạn có nhóm nào nhiều người TQ không kéo tôi vào giao lưu với</td>
+		</tr>
+		<tr>
+			<td>请进这群！有很多对你有帮助的真实消息</td>
+			<td>Mời bạn vào nhóm này, tôi thấy có nhiều thông tin chân thực hữu ích với bạn.</td>
+		</tr>
+		<tr>
+			<td>我现在越南工作，所以有收到这些信息。我觉得这些信息对我们中国人很有意思.我想与你分享</td>
+			<td>Tôi đang công tác ở việt nam,tôi đã nhận được những thông tin này. Tôi thấy nó rất có ý nghĩa đối với người trung quốc chúng ta.Tôi muốn chia sẻ với bạn</td>
+		</tr>
+		<tr>
+			<td>打扰您我很对不起。我只是想给您带来更美好的。</td>
+			<td>Rất xin lỗi nếu tôi có làm phiền bạn. Tôi chỉ muốn đem những điều tốt đẹp đến với bạn</td>
+		</tr>
+		<tr>
+			<td>如果您不想接受更多信息那请跟我说，打扰您我很对不起。</td>
+			<td>Nếu bạn không muốn nhận nữa xin hãy nói với tôi, rất xin lỗi nếu tôi có làm phiền bạn.</td>
+		</tr>
+		<tr>
+			<td>你有空吗? 我们聊聊天儿吧。</td>
+			<td>Bạn có rảnh không, chúng ta nói chuyện một chút nhé</td>
+		</tr>
+		<tr>
+			<td>你发给你这些真实信息吧。</td>
+			<td>Tôi gửi bạn thông tin chân thật này nhé</td>
+		</tr>
+		<tr>
+			<td>我在海外看到中国现在的各种天灾，大洪水，干旱，你那边有没有受影响？</td>
+			<td>Tôi ở Hải Ngoại xem được rất nhiều thông tin về hạn Hán, Lũ lụt ở Đại Lục, chỗ bạn có bị ảnh hưởng gì không?</td>
+		</tr>
+	  
+		<tr>
+			<td>我们所做的目的呢，就是让大陆人明白佛法真相，得福报。</td>
+			<td>Chúng tôi cố gắng làm việc này chỉ vì muốn nói với bạn những thông tin chân thật</td>
+		</tr>
+		<tr>
+			<td>通过翻墙软件你可以看到海外的消息。</td>
+			<td>Bạn đã có phần mềm vượt tường lửa để có thể đọc được tin tức chân thực từ nước ngoài không!</td>
+		</tr>
+		<tr>
+			<td>哦，嗨，我不需要任何服务，相反，我想与您分享一些信息。 我觉得对你有好处。</td>
+			<td>Ồ, xin chào, tôi không cần bất kỳ dịch vụ nào, thay vào đó, tôi muốn chia sẻ một số thông tin với bạn. Tôi nghĩ nó tốt cho bạn</td>
+		</tr>
+		<tr>
+			<td>也许只是偶然，我很高兴与您交谈。</td>
+			<td>Có lẽ chỉ là tình cờ thôi, tôi rất vui khi được nói chuyện với bạn.</td>
+		</tr>
+		<tr>
+			<td>我们羡慕你们文化5000年的历史，中国老百姓真的良善。</td>
+			<td>Chúng tôi ngưỡng mộ nền văn hóa 5000 năm của các bạn, và nhân dân trung quốc thật là lương thiện</td>
+		</tr>
+		<tr>
+			<td>在等你回复的时候，我连续转给你一些讯息而你从来还没机会看过.</td>
+			<td>Trong khi chờ bạn hồi âm, tôi gửi cho bạn một số thông tin có thể bạn chưa xem qua .</td>
+		</tr>
+		<tr>
+			<td>我真的很珍惜你，所以才跟你说这件事情，我是越南人，我们在这里没有被封锁的信息，因此很了解你的国家。</td>
+			<td>Tôi rất quý bạn, nên mới nói những điều này, tôi là người Việt Nam ở đây chúng tôi không bị phong tỏa thông tin nên biết về bên nước bạn là rất rõ</td>
+		</tr>
+		<tr>
+			<td>我刚学中文不久，不能及时回答你的。</td>
+			<td>Tôi vẫn đang học tiếng Trung nên không thể trả lời nhanh cho bạn</td>
+		</tr>
+		<tr>
+			<td>您好，我分享一些大家关心的真实信阝息与新闻，请加好友名片和拉我进一些微信群，传递更多真相，需要您的帮助.</td>
+			<td>Chào bạn, tôi chia sẻ một vài tin tức và sự thật mà mọi người quan tâm, hãy thêm bạn bè danh thiếp này và kéo tôi vào các nhóm, truyền chân tướng, cần sự giúp đỡ của bạn</td>
+		</tr>
+		<tr>
+			<td>请允许我拉您进传递真实信息群去。</td>
+			<td>Tôi xin phép thêm bạn vào nhóm wechat có nhiều thông tin chân thực và hữu ích</td>
+		</tr>
+		<tr>
+			<td>我有新消息，大家想看就进群哦</td>
+			<td>Tôi có tin tức mới, cả nhà ai nghe thì gia nhập vào nhé</td>
+		</tr>
+		<tr>
+			<td>送个大家好听意义的歌曲，哪位想听就进群哦</td>
+			<td>Tôi tặng cả nhà bài hát này rất hay và ý nghĩa, có ai muốn nghe không tôi gọi nhóm</td>
+		</tr>
+		<tr>
+			<td>我不會打字中文，能不能加我到你的通訊錄讓我打電話給你</td>
+			<td>Tôi không gõ được tiếng Trung, bạn thêm tôi vào danh bạ, để tôi gọi lại cho bạn nhé.</td>
+		</tr>
+		<tr>
+			<td>因为我的帐户刚刚创建，所以该软件会像这样报告，过一段时间会不再报告，那只是该软件的自动机制！</td>
+			<td>Vì tài khoản của mình mới tạo nên phần mềm sẽ báo như thế này, sau một thời gian sẽ không báo nữa, đó chỉ là cơ chế tự động của phần mềm thôi!</td>
+		</tr>
+		<tr>
+			<td>可能我的号被限制请好友进群的功能了，那你加这号哦，这号会邀请您进群</td>
+			<td>Có lẽ nick của tôi đang bị hạn chế chức năng mời bạn, vậy bạn kết bạn với nick wechat này nhé, nick đó sẽ mời bạn vào nhóm.</td>
+		</tr>
+		<tr>
+			<td>真抱歉，刚才网络断线我只好吧电话挂断，现在您方便接电话吗？</td>
+			<td>Thành thật xin lỗi bạn vì mạng bị lỗi nên giao tiếp bị gián đoạn, gọi điện lại cho bạn được không ?</td>
+		</tr>
+		<tr>
+			<td>也希望您拉我进别的群！咱们共同发光明!</td>
+			<td>Cũng mong bạn kéo tôi vào nhóm. Chúng ta cùng nhau phát ánh quang minh!</td>
+		</tr>
+		<tr>
+			<td>现在是八点十五分钟，今晚的节目为您播放最好听的音乐，繁忙的一天后，这是您放松精神的时刻 如果我打扰到您，我向您道歉，请您自动挂机。</td>
+			<td>Bây giờ là 20h15 phút, chương trình lắng đọng về đêm với những audio tĩnh lặng giúp bạn thư thái tinh thần sau một ngày làm việc Nếu có làm phiền tôi rất xin lỗi, bạn hãy tự cúp máy nhé</td>
+		</tr>
+		<tr>
+			<td>在这里聊不方便，我邀请您进我的群让你看看更多好消息.</td>
+			<td>Nói chuyện tại đây không tiện, tôi mời bạn vào group có thể nhiều thông tin hơn để bạn xem.</td>
+		</tr>
+		<tr>
+			<td>我中文讲的不好，我明天请我朋友给你打，可以吗？ 我请朋友改天再给你打哦，现在你就看看这个吧</td>
+			<td>Hẹn bạn lúc khác tôi sẽ nhờ bạn của tôi gọi lại cho bạn, bây giờ bạn xem thêm cái này nhé</td>
+		</tr>
+		<tr>
+			<td>我中文讲的不好，我明天请我朋友给你打，可以吗？</td>
+			<td>Tôi không hiểu tiếng trung lắm, ngày mai tôi sẽ nhờ bạn của tôi gọi lại cho bạn nhé!</td>
+		</tr>
+		<tr>
+			<td>我们这个群里面每天更新海外最新真实资讯，您进群以后也希望您转发群二维码给您所在的一些微信群 和好友！ 您的举手之劳就可以让更多人翻阅红墙，了解墙外真实资讯，希望您帮忙！</td>
+			<td>Nhóm này của chúng tôi hang ngày cập nhật các tin tức chân thực mới nhất ở Hải Ngoại. Sau khi bạn vào nhóm cũng hi vọng chuyển phát mã nhóm này đến các bạn bè và các nhóm mà bạn tham gia.</td>
+		</tr>
+		<tr>
+			<td>四海兄弟，五湖是一家。我分享一些大家关心的真实信彡息与新闻，有兴趣的朋友 请加好友名片和拉我进一些微信群，需要您的帮助。感谢~。请用浏览器打开以下网址， 里面有非常多的绝密视钅频。</td>
+			<td>Huynh đệ giang hồ tứ hải đều là người một nhà. Tôi xin phép chia sẻ một số thông tin và tin tức chân thực mà mọi người quan tâm. Bạn bè nào có hứng thú thì hãy thêm danh thiếp này và kéo tôi thêm vào một số nhóm khác. Hi vọng được sự giúp đỡ của mọi người. hãy Dùng trình duyệt web mở trang web sau， bên trong là những video vô cùng tuyệt mật. (chèn, gửi link chân tướng ở tab audio)</td>
+		</tr>
+		<tr>
+			<td>我是越南人，我也跟您一样，黑头发黄皮肤，我的祖先是从中国来的，所以，我很珍惜中国人。</td>
+			<td>Tôi là người VN, cũng tóc đen da vàng, tổ tiên cũng là người TQ đến.rất trân quý người Trung Quốc</td>
+		</tr>
+		<tr>
+			<td>我是越南人， 我在学中文。 我很喜欢中国，喜欢中华民族5000年的历史。</td>
+			<td>Tôi là ng VN, tôi đang học tiếng TQ, tôi rất thích nền văn hóa 5000 năm của các bạn.</td>
+		</tr>
+		<tr>
+			<td>我是一名海外志愿者，我每天都利用业余时间与中国大陆人分享被中共封锁了的信息。</td>
+			<td>Tôi là một tình nguyện viên người nước ngoài, hàng ngày tôi tranh thủ thời gian rảnh để chia sẻ với người Trung Quốc Đại Lục về những thông tin mà trong nước các bạn không được tiếp xúc đến.</td>
+		</tr>
+		<tr>
+			<td>我给您一些国际发布并在国内封锁的信息。您看看 不会耽误您时间.</td>
+			<td>Tôi muốn gửi cho bạn 1 số thông tin mà ko có trong nước, trang web nước ngoài đều đăng tải. Bạn xem 1 chút, không mất nhiều thời gian của bạn đâu.</td>
+		</tr>
+		<tr>
+			<td>我们做这些是为了被封锁网站的中国人可以收到真实的信息。</td>
+			<td>Chúng tôi làm những cái này để người TQ bị phong tỏa internet có thể đọc được tin tức chân thật từ nước ngoài đó bạn vào xem nhé</td>
+		</tr>
+		<tr>
+			<td>你打得开我发的链接吗？</td>
+			<td>Bạn có vào được liên kết tôi gửi không!</td>
+		</tr>
+		<tr>
+			<td>目前可能您还不关心我所说的话，什么时候需要了解请点击这里</td>
+			<td>Hiện tại bạn có thể chưa quan tâm tới những điều tôi nói, một lúc nào đó nếu cần tìm hiểu thêm, xin hãy truy cập vào đây</td>
+		</tr>
+
+		<tr>
+			<td id="p2" class="tit2" colspan="3">Chào kết bạn</td>
+		</tr>
+		<tr>
+			<td>改天再打哦，祝你有美好的一天</td>
+			<td>Lúc khác tôi sẽ gọi lại cho ban nhé, chúc bạn một ngày vui vẻ.</td>
+		</tr>
+		<tr>
+			<td>加好友聊聊哦</td>
+			<td>Kết bạn nói chuyện nhé</td>
+		</tr>
+		<tr>
+			<td>首先您和家庭走运，吉祥，身体健康。</td>
+			<td>Đầu tiên, bạn và gia đình của bạn may mắn, tốt lành và khỏe mạnh.</td>
+		</tr>
+		<tr>
+			<td>我从海外来的。想跟您分享一些有用消息。我们加好友吧！</td>
+			<td>Tôi từ hải ngoại, có nhiều thông tin hữu ích muốn chia sẻ với bạn, hãy kết bạn với tôi</td>
+		</tr>
+		<tr>
+			<td>我朋友把你的账号给我说给你一些墙内看不到的事实。</td>
+			<td>Bạn tôi đưa tài khoản của bạn cho tôi, nói cho bạn một số sự thật trong nước không được biết.</td>
+		</tr>
+		<tr>
+			<td>我想与您分享一些信息。 我觉得对你有好处。</td>
+			<td>Tôi muốn chia sẻ một số thông tin với bạn. Tôi nghĩ nó tốt cho bạn.</td>
+		</tr>
+		<tr>
+			<td>大洪水、疫情的情形怎么样了？你那边一切都好吧？</td>
+			<td>Tình hình lũ lụt, dịch bệnh thế nào rồi, chỗ bạn đều ổn cả chứ</td>
+		</tr>
+		<tr>
+			<td>我们在海外很关心国内的老百姓</td>
+			<td>Chúng tôi ở Hải Ngoại rất quan tâm tới người dân trong nước</td>
+		</tr>
+		<tr>
+			<td>您有空吗？我们加好友聊聊天啊！</td>
+			<td>Bạn có rảnh không, kết bạn nói chuyện nhé!</td>
+		</tr>
+		<tr>
+			<td>在吗？加好友聊聊啊</td>
+			<td>Bạn có rảnh không, kết bạn nói chuyện một chút</td>
+		</tr>
+		<tr>
+			<td>我不是推销产品更不是卖保险。 只是想送上最真诚的祝福。 请加我为好友</td>
+			<td>Tôi không phải làm quảng cáo, không phải bán bảo hiểm. Chỉ là tặng bạn lời chúc phúc chân thành nhất. Hãy kết bạn với tôi.</td>
+		</tr>
+		<tr>
+			<td>你好！我们加好友吧</td>
+			<td>Xin chào, kết bạn nhé</td>
+		</tr>
+		<tr>
+			<td>我只想送您一些最好的最真实的消息.</td>
+			<td>Tôi chỉ muốn gửi tặng bạn những điều tốt đẹp, những thông tin chân thực.</td>
+		</tr>
+		<tr>
+			<td>聊聊一下，可以吗?</td>
+			<td>Bạn có rảnh nói chuyện không</td>
+		</tr>
+		<tr>
+			<td>您好！我是 南方人，我们加好友吧！</td>
+			<td>Xin chào, tôi là người phương nam,kết bạn với tôi nhé!</td>
+		</tr>
+		<tr>
+			<td>加我为好友 我会让你看到 一个真实的世界。 我不是推销产品 更不是卖保险的。 我在墙外边。</td>
+			<td>Kết bạn với tôi. Tôi sẽ giúp bạn thấy được một thế giới chân thật, tôi không phải làm quảng cáo, càng không phải bán bảo hiểm. Tôi ở hải ngoại.</td>
+		</tr>
+
+		<tr>
+			<td id="p3" class="tit2" colspan="3">Chát để gửi audio
+			</td>
+		</tr>
+		<tr>
+			<td>送你这个小礼物，它是个非常有意思的歌儿</td>
+			<td>Gửi tặng bạn một món quà, đây là một bài hát rất ý nghĩa</td>
+		</tr>
+		<tr>
+			<td>请允许我为您放一些广播，请您倾听</td>
+			<td>Tôi xin phép gửi cho bạn nghe những đoạn thu âm, xin hãy nghe nó</td>
+		</tr>
+		<tr>
+			<td>希望您珍惜这个机会听完这些消息，这些对您很有益</td>
+			<td>Hãy trân quý cơ hội nghe những thông tin này nhé, nó rất hữu ích và quan trọng với bạn</td>
+		</tr>
+		<tr>
+			<td>不知道你有什么疑惑吗？请允许我发这段广播</td>
+			<td>Không biết bạn có thắc mắc gì không, nên tôi xin phép gửi cho bạn những đoạn ghi âm này nhé</td>
+		</tr>
+		<tr>
+			<td>希望您把握机会听完广播。我只希望你好</td>
+			<td>Xin hãy trân quý cơ hội và nghe hết! Tôi chỉ muốn điều tốt đến với bạn</td>
+		</tr>
+		<tr>
+			<td>怎么了，您听完录音了吗？</td>
+			<td>Bạn thế nào rồi, đã nghe hết voice mà tôi gửi chưa?</td>
+		</tr>
+		<tr>
+			<td>你喜欢听广播吗？这是希望之声的广播， 帮您心情安静轻松</td>
+			<td>Gửi bạn thanh âm hy vọng, giúp bạn tĩnh lặng, thư thái tinh thần</td>
+		</tr>
+		<tr>
+			<td>你好，你听完了吗？有什么疑惑吗?</td>
+			<td>Xin chào, bạn đã nghe hết chưa, có thắc mắc gì không?</td>
+		</tr>
+		<tr>
+			<td>您若不方便接电话，那我就发那段录音，您打开听听啊!</td>
+			<td>Bạn không tiện bắt máy nghe, vậy tôi gửi các file ghi âm đó, bạn mở ra xem nhé</td>
+		</tr>
+		<tr>
+			<td>您若不方便接电话，那我就发那段录音，您打开听听啊!</td>
+			<td>Bạn không tiện nghe máy nghe, vậy tôi gửi các file ghi âm đó, bạn mở ra xem nhé!</td>
+		</tr>
+		<tr>
+			<td>我不太懂你的话，这些信息很有益，你可以再听这个录音 请稍等，我在找人来翻译，因为不不懂中文</td>
+			<td>Tôi không hiểu những gì bạn nói lắm, những thông tin này rất hữu ích, bạn có thể nghe thêm bản ghi âm này nhé</td>
+		</tr>
+		<tr>
+			<td>再送您这段广播</td>
+			<td>Tặng bạn thêm một audio nữa nhé</td>
+		</tr>
+		<tr>
+			<td>你还没回复，那请允许我再发几个录音</td>
+			<td>Không thấy bạn phản hồi, tôi xin phép gửi thêm cho bạn thêm các đoạn thu âm này nhé</td>
+		</tr>
+		<tr>
+			<td>您听了没有？我还有别的，送您哦，休闲时打开听听哦</td>
+			<td>Bạn đã nghe chưa, tôi còn 1 cái nữa, gửi tặng bạn, hãy nghe nó lúc thư giãn nghỉ ngơi!</td>
+		</tr>
+		<tr>
+			<td>在等待时，请多看多听这些信息和录音</td>
+			<td>Trong lúc chờ đợi, hãy đọc thêm thông tin và nghe thêm file ghi âm này nhé</td>
+		</tr>
+		<tr>
+			<td>如果您不方便接电话，那我发给您这段录音，请您有空打开听听啊。</td>
+			<td>Bạn không tiện nghe máy, vậy tôi gửi file ghi âm đó bạn lúc nào rảnh hãy mở ra nghe nhé</td>
+		</tr>
+		<tr>
+			<td id="p4" class="tit2" colspan="3">Chát để phát Audio
+			</td>
+		</tr>
+		<tr>
+			<td>我送你一首歌，这就是一个很有意思的小礼物。</td>
+			<td>Tôi tặng bạn một bài hát nhé, một món quà rất ý nghĩa</td>
+		</tr>
+		<tr>
+			<td>你还想听别的吗？</td>
+			<td>Bạn có muốn nghe thêm nữa không?</td>
+		</tr>
+		<tr>
+			<td>我不会中文，但是我一直希望您能够听这些重要的消息</td>
+			<td>Tôi không biết tiếng Trung, nhưng tôi thực sự muốn bạn nghe được những thông tin quan trọng này!</td>
+		</tr>
+		<tr>
+			<td>因为不知道你有没有什么疑惑，所以请允许我为您放这段广播</td>
+			<td>Không biết bạn có thắc mắc gì không, nên tôi xin phép gọi điện lại phát cho bạn nghe băng thu âm này nhé</td>
+		</tr>
+		<tr>
+			<td>请允许我为您放这段录音</td>
+			<td>Tôi xin phép gọi điện bật cho bạn nghe một đoạn thu âm</td>
+		</tr>
+		<tr>
+			<td>我打电话给您放这段广播，好吗？</td>
+			<td>Tôi xin phép gọi điện bật cho bạn nghe một đoạn thu âm được không!</td>
+		</tr>
+		<tr>
+			<td>你听明白了吗？</td>
+			<td>Bạn nghe có minh bạch không?</td>
+		</tr>
+		<tr>
+			<td>您看我能不能打电话为您放这段广播</td>
+			<td>Tôi xin phép gọi lại cho bạn nghe các audio này, bạn sẽ minh bạch</td>
+		</tr>
+		<tr>
+			<td>希望您把握机会，把广播听完！我只希望您好！我再继续给您放广播，好吗？</td>
+			<td>Xin hãy trân quý cơ hội và nghe hết! Tôi chỉ muốn điều tốt đến với bạn, tôi gọi lại phát cho bạn nghe nhé</td>
+		</tr>
+
+		<tr>
+			<td id="p5" class="tit2" colspan="3">Chát gửi chân tướng
+			</td>
+		</tr>
+		<tr>
+			<td>说不如看 来到墙外看看，请用火狐浏览器打开此网址</td>
+			<td>Nói không bằng nhìn, đến hải ngoại xem xem, Bạn hãy dùng trình duyệt web để xem các địa chỉ trên</td>
+		</tr>
+		<tr>
+			<td>真诚发给您大陆看不到的真相网站。万古机缘，请珍贵</td>
+			<td>Chân thành gửi cho bạn các thông tin chân thật mà bạn không thể thấy ở Trung Quốc đại lục. Cơ duyên quý giá xin hãy trân quý.</td>
+		</tr>
+		<tr>
+			<td>加我为好友 我会让你看到 一个真实的世界。 我不是推销产品 更不是卖保险的。 我在墙外边。</td>
+			<td>Kết bạn với tôi. Tôi sẽ giúp bạn thấy được một thế giới chân thật, Tôi không phải làm quảng cáo, càng không phải bán bảo hiểm. Tôi ở hải ngoại.</td>
+		</tr>
+		<tr>
+			<td>您好！我不需要任何服务，我只是想与您分享一些信息。 因为我觉的这对您可能有帮助。</td>
+			<td>Ồ, xin chào, tôi không cần bất kỳ dịch vụ nào, tôi muốn chia sẻ một số thông tin với bạn. Tôi nghĩ nó hữu ích cho bạn</td>
+		</tr>
+		<tr>
+			<td>我发给您一些您在国内看不到的信息</td>
+			<td>Tôi gửi cho bạn một số thông tin mà trong nước không xem được</td>
+		</tr>
+		<tr>
+			<td>朋友，您看今年是個不尋常的年,天災人禍現在這個形勢變化真的非常的大.所以大家都在互相提醒.要保護好自己非常重要</td>
+			<td>Bạn thấy đấy năm nay là một năm thật bất thường, thiên tai nhiên nhân họa liên miên.Vì vậy, mọi người đang nhắc nhở nhau. Bảo vệ bản thân là điều rất quan trọng</td>
+		</tr>
+		<tr>
+			<td>我不是做广告，也不是卖保险。我是送你最真诚的祝福语。</td>
+			<td>Tôi không phải làm quảng cáo, không phải bán bảo hiểm. Chỉ là tặng bạn lời chúc phúc chân thành nhất.</td>
+		</tr>
+		<tr>
+			<td>当在天灾人祸面前的悲痛和绝望时，哪是通路？请给您可以躲过灾难的办法。</td>
+			<td>Khi đau buồn và tuyệt vọng trước trước thiên tai nhân họa đâu là lối thoát xin gửi tới bạn một phương cách</td>
+		</tr>
+		<tr>
+			<td>你好：我远方的朋友 想传递给你真实声音 此内容墙内看不到的。如果直接点击打不开就请用浏览器</td>
+			<td>Chào bạn, tôi là ng bạn từ phương xa, muốn gửi bạn nhưng thanh âm chân tượng. Nội dung bao gồm những thứ trong nước không được thấy. Nếu mở trực tiếp không được thì bạn hãy dùng trình duyệt web</td>
+		</tr>
+		<tr>
+			<td>我给你破网软体，可以看到许多内地封锁的消息</td>
+			<td>Tôi gửi cho bạn một phần mềm đột phá mạng, bạn có thể xem được rất nhiều những tin tức bị phong tỏa trong nước</td>
+		</tr>
+		<tr>
+			<td>也许您很忙，没有时间看这份信息。如果打扰到您，真的很抱歉啊。 我想发给您一些国内不能接触到的信息。请您有空儿就看看啊。谢谢你看了这条短信。</td>
+			<td>Có thể nhiều người nhắn tin cho bạn hoặc bạn không có thời gian để nói chuyện với tôi. Nếu làm phiền bạn thì cho tôi xin lỗi. Tôi gửi bạn 1 ít thông tin mà trong nước không thể xem được, nếu bạn rảnh có thể vào xem nhe.Cảm ơn bạn đã đọc tin nhắn của tôi.</td>
+		</tr>
+		<tr>
+			<td>目前可能您还不关心我所说的话，什么时候需要了解请点击这里</td>
+			<td>Hiện tại bạn có thể chưa quan tâm tới những điều tôi nói, một lúc nào đó nếu cần tìm hiểu thêm, xin hãy truy cập vào đây</td>
+		</tr>
+		<tr>
+			<td>我们能聊天也可能是缘分的，请珍贵我所发给您的信息哦。</td>
+			<td>Có lẽ chúng ta gặp nhau cũng là có duyên, hãy trân quý cơ hội tìm hiểu những thông tin mà tôi gửi nhé.</td>
+		</tr>
+		<tr>
+			<td>我们做这些是为了被封锁网站的中国人可以收到真实的信息。</td>
+			<td>Chúng tôi làm những cái này để người TQ bị phong tỏa internet có thể đọc được tin tức chân thật từ nước ngoài đó bạn vào xem nhé</td>
+		</tr>
+		<tr>
+			<td>我们今天能见面是有缘的，我送您和家人有益和重要的消息</td>
+			<td>Chúng ta gặp nhau hôm nay có thể cũng là có duyên, tôi tặng bạn những thông tin hữu ích và quan trọng với bạn cùng gia đình</td>
+		</tr>
+		<tr>
+			<td>送您有意义的信息，您仔细看，有需要可以跟我聊哦。</td>
+			<td>Tặng bạn những thông tin hữu ích, bạn đọc kỹ rồi có thắc mắc gì chát lại với tôi nhé</td>
+		</tr>
+		<tr>
+			<td>您也可以点击这里，了解更多自由和真实信息</td>
+			<td>Bạn có thể tự mình vào đây để đọc thêm các thông tin tự do và chân thực</td>
+		</tr>
+		<tr>
+			<td>我发给您一些您在国内看不到的信息</td>
+			<td>Tôi gửi cho bạn một số thông tin mà trong nước không xem được</td>
+		</tr>
+		<tr>
+			<td>你好：墙内墙外两重天，看到可以开阔视野 请用浏览器打开此网址。</td>
+			<td>Chào bạn, trong nước ngoài nước hai tầng trời, xem được thông tin có thể mở rộng tầm mắt. Bạn hãy dùng trình duyệt web để xem các địa chỉ trên</td>
+		</tr>
+		<tr>
+			<td>朋友，请放心，我没有钱送给你，想跟你聊天啊。</td>
+			<td>Tôi không có tiền để tặng bạn, tôi hy vọng có thể trò chuyện với bạn như một người bạn</td>
+		</tr>
+		<tr>
+			<td>前天有的好人从海外给您的电话问候您，他叫我发给您这些墙内看不到的消息。您多看多听多了解啊。</td>
+			<td>Hôm trước có người tốt từ hải ngoại gọi điện cho hỏi thăm bạn. Anh ấy bảo tôi gửi bạn một số thông tin trong nước không được biết. Bạn xem nhiều nghe nhiều hiểu nhiều nhé.</td>
+		</tr>
+		<tr>
+			<td>你好，真实的声音，新的感受 请用浏览器打开此网址。</td>
+			<td>Chào bạn, thanh âm nói lên sự thật, cảm thụ mới, Bạn hãy dùng trình duyệt web để xem các địa chỉ trên</td>
+		</tr>
+		<tr>
+			<td>你好，加好友打开此网页会看到另一番景象。请下载一个谷歌 或火狐浏览器 用浏览器打开。</td>
+			<td>Chào bạn, kết bạn xong, mở link này sẽ thấy một cảnh tượng hoàn toàn khác. Bạn hãy tải google hoặc trình duyệt web vượt tường lửa, trình duyệt web để mở link trên</td>
+		</tr>
+		<tr>
+			<td>远隔千山万水 就想送上真言 请用浏览器打开此网址。到墙外看看！</td>
+			<td>Thiên sơn vạn thuỷ cách chỉ 1 bức tường, hi vọng bạn mấy lời chân ngôn, Bạn hãy dùng trình duyệt web để xem các địa chỉ trên</td>
+		</tr>
+		<tr>
+			<td id="p6" class="tit2" colspan="3">Chát xin khẩu giảng
+			</td>
+		</tr>
+		<tr>
+			<td>太好了! 我还有些消息想跟您分享，我能不能给您打电话？</td>
+			<td>Tốt rồi, tôi có thêm thông tin muốn chia sẻ nhiều hơn, tôi có thể gọi cho bạn không?</td>
+		</tr>
+		<tr>
+			<td>我朋友会中文，我就让他来陪你 好吗？</td>
+			<td>Bạn của tôi học được một chút tiếng Trung, tôi sẽ nhờ cô ấy vào nói chuyện thêm với bạn nhé</td>
+		</tr>
+		<tr>
+			<td>你所看到的消息常被中共歪曲事实编造谎言，所以请允许我打个电话给你解释一下</td>
+			<td>Những thông tin bạn biết được thường bị trung cộng bịa đặt bóp méo, nên tôi xin phép gọi để giải thích thêm cho bạn nhé</td>
+		</tr>
+		<tr>
+			<td>"你也知道了，最近天灾人祸、疫情洪水连绵不断。 我只希望大家都平安，所以有些话想跟您分享。我能给你打个电话吗？"</td>
+			<td>Bạn biết đấy gần đây thiên tai nhân họa, dịch bệnh lũ lụt rất nhiều, tôi chỉ muốn mọi người được bình an, nên có một số điều thật tâm muốn chia sẻ với bạn. Có thể gọi cho bạn được không?</td>
+		</tr>
+		<tr>
+			<td>我看不懂，打字不方便。您看我能不能给您打个电话</td>
+			<td>Tôi đọc không hiểu, chát không tiện, xin phép gọi lại cho bạn nhé</td>
+		</tr>
+		<tr>
+			<td>您现在有空吗? 打字不方便，我可不可以给您打电话？</td>
+			<td>Bây giờ bạn có rảnh không, chat không tiện, tôi gọi lại cho bạn nhé</td>
+		</tr>
+		<tr>
+			<td>我中文说的不是很好。我请朋友给您打电话，好吗？</td>
+			<td>Tôi không biết tiếng Trung, vậy tôi nhờ bạn của tôi gọi lại cho bạn nhé!</td>
+		</tr>
+		<tr>
+			<td>你现在不方便接电话吗？那我改天再给你播哦。趁着在闲着的时候，您就看看这些消息啊</td>
+			<td>Bây giờ bạn không tiện nghe máy à, vậy xin phép lúc khác gọi lại cho bạn nhé, trong lúc rảnh bạn có thể đọc thêm những thông tin mà tôi gửi.</td>
+		</tr>
+		<tr>
+			<td>您现在有空吗？我们可以打电话聊聊吗？</td>
+			<td>Bạn bây giờ đã rảnh chưa, tôi gọi lại nói chuyện với bạn nhé (tình huống gọi lai khi lần trước họ bận)</td>
+		</tr>
+		<tr>
+			<td>真不好意思，我的中文讲的不好，我请我朋友跟你聊一下，好吗？</td>
+			<td>Tôi không hiểu tiếng trung lắm, nên tôi xin lỗi, tôi kết nối máy để bạn tôi nói chuyện với bạn nhé</td>
+		</tr>
+		<tr>
+			<td>请给我几分钟好吗？我想跟您分享的消息至关重要，并且我想这对您有好处的。</td>
+			<td>Hãy cho tôi vài phút, những điều tôi chia sẻ rất quan trọng và hữu ích với bạn</td>
+		</tr>
+		<tr>
+			<td>你现在怎么样？方便接电话吗？</td>
+			<td>Bạn thế nào rồi, bây giờ có nghe máy được không?</td>
+		</tr>
+		<tr>
+			<td>我不会太多中文，所以我请朋友来给你打电话，好吗？</td>
+			<td>Tôi không biết nhiều tiếng Trung nên tôi nhờ bạn của tôi gọi cho bạn nhé?</td>
+		</tr>
+		<tr>
+			<td>今天能见面就是缘分，希望您能够接电话</td>
+			<td>Gặp nhau hôm nay cũng là duyên phận, xin hãy bắt máy nhé</td>
+		</tr>
+		<tr>
+			<td>我能再给你打个电话吗?</td>
+			<td>Tôi có thể gọi điện lại cho bạn được không?</td>
+		</tr>
+		<tr>
+			<td>不知道你有什么疑惑吗，请允许我给你打个电话，好吗？</td>
+			<td>Không biết bạn có thắc mắc gì không, nên tôi xin phép gọi cho bạn nhé!</td>
+		</tr>
+		<tr>
+			<td>不想你所想象的那样，我给你打个电话吗？</td>
+			<td>Không phải như bạn nghĩ đâu, để tôi gọi điện lại nói cho bạn thêm nhé</td>
+		</tr>
+		<tr>
+			<td>朋友，我就耽误您几分钟时间跟您讲一下好不好，因为这件事情真的对您很重要。好吗?</td>
+			<td>Bạn à, tôi xin bạn vài phút để nói cho bạn điều này, nó rất quan trọng đối với bạn. Được không?</td>
+		</tr>
+		<tr>
+			<td>发简讯不方便，我通过微信给你打电话，好吗？</td>
+			<td>Nhắn tin không tiện, tôi gọi lại cho bạn qua wechat nhé</td>
+		</tr>
+		<tr>
+			<td id="p7" class="tit2" colspan="3">Giao tiếp/chào hỏi</td>
+		</tr>
+		<tr>
+			<td>请问, 你是中国人吗? 我很喜欢中国人, 也很喜欢中国的文化 你去过越南吗？ 越南也有很多风景，非常好客</td>
+			<td>"Bạn là người Trung Quốc à? Tôi rất thích người Trung Quốc và văn hóa Trung Quốc Bạn đã đến Việt Nam chưa? Việt Nam còn nhiều cảnh đẹp, mến khách lắm "</td>
+		</tr>
+		<tr>
+			<td>早上好！</td>
+			<td>Chào buổi sáng</td>
+		</tr>
+		<tr>
+			<td>每一天 都 是 新 的 机 会。早 上 好</td>
+			<td>Mỗi ngày mới đều là một cơ hội mới. Chào buổi sáng!</td>
+		</tr>
+		<tr>
+			<td>早上好！祝你有个幸运的一天！</td>
+			<td>Buổi sáng tốt lành, chúc bạn có một ngày may mắn.</td>
+		</tr>
+		<tr>
+			<td>早上好！ 祝一切顺利！</td>
+			<td>Chào buổi sáng! Chúc mọi việc thuận lợi!</td>
+		</tr>
+		<tr>
+			<td>你可不可以上这些网站？</td>
+			<td>Bạn có vào được các trang web này không!</td>
+		</tr>
+		<tr>
+			<td>我是越南人 我也是黑头发黄皮肤.我的祖先是从中国来的</td>
+			<td>Tôi là người VN, cũng tóc đen da vàng, tổ tiên cũng là người TQ đến</td>
+		</tr>
+		<tr>
+			<td>我很希望能够跟大陆人交友</td>
+			<td>Tôi rất hy vọng có thể kết bạn với những người Trung Quốc đại lục</td>
+		</tr>
+		<tr>
+			<td>我现在有急事，过一会再跟你聊哦</td>
+			<td>Tôi đang vội, tôi sẽ nói chuyện với bạn sau</td>
+		</tr>
+		<tr>
+			<td>今天你觉得怎么样? 你的工作顺利吗?</td>
+			<td>Hôm nay bạn cảm thấy thế nào? Công việc của bạn có tốt không</td>
+		</tr>
+		<tr>
+			<td>这些消息您都看完了吗？有什么疑惑吗？</td>
+			<td>Bạn đã xem hết thông tin chưa, có gì thắc mắc không</td>
+		</tr>
+		<tr>
+			<td>真不好意思，我不会中文，但是我所发的信息完全对你好，你尽力看看吧</td>
+			<td>Thật xin lỗi tôi không biết tiếng Trung, nhưng những thông tin tôi gửi rất hữu ích với bạn, vậy bạn hãy cố gắng đọc nó nhé</td>
+		</tr>
+		<tr>
+			<td>请稍等，我在找人来翻译，因为不不懂中文</td>
+			<td>Xin hãy đợi chút, tôi nhờ người dịch vì tôi không hiểu tiếng Trung</td>
+		</tr>
+		<tr>
+			<td>祝 你 早 上 好</td>
+			<td>Chúc bạn buổi sáng tốt lành</td>
+		</tr>
+		<tr>
+			<td>我岁数比较大了，所以我学不了中文，请你看看我发的链接。如果需要的话，我会请朋友打电话给你</td>
+			<td>Tôi đã khá lớn tuổi, nên tôi không học được tiếng Trung, bạn hãy tìm hiểu thêm ở link tôi gửi và nếu cần tôi sẽ nhờ bạn của tôi gọi lại cho bạn</td>
+		</tr>
+		<tr>
+			<td>那就好了！</td>
+			<td>Vậy tốt quá rồi</td>
+		</tr>
+		<tr>
+			<td>你结婚了没?还是在单身呢?</td>
+			<td>Bạn đã kết hôn hay độc thân?</td>
+		</tr>
+		<tr>
+			<td>你今年多大了？</td>
+			<td>Bạn bao nhiêu tuổi?</td>
+		</tr>
+		<tr>
+			<td>你出国去上学还是工作</td>
+			<td>Bạn đang xuất ngoại đi học hay đi làm</td>
+		</tr>
+		<tr>
+			<td>早 上 快 乐</td>
+			<td>Buổi sáng vui vẻ</td>
+		</tr>
+		<tr>
+			<td>我想告诉你这个</td>
+			<td>Tôi muốn nói với bạn điều này</td>
+		</tr>
+		<tr>
+			<td>我是越南人</td>
+			<td>Tôi là người Việt Nam</td>
+		</tr>
+		<tr>
+			<td>你可以上Youtube和脸书吗？</td>
+			<td>Bạn có vào được youtube và facebook không?</td>
+		</tr>
+		<tr>
+			<td>你是中国哪里人啊</td>
+			<td>Bạn ở khu vực nào Trung Quốc vậy</td>
+		</tr>
+		<tr>
+			<td>干什么呢</td>
+			<td>Bạn đang làm gì vậy?</td>
+		</tr>
+		<tr>
+			<td>非常感谢</td>
+			<td>Cảm ơn bạn rất nhiều</td>
+		</tr>
+		<tr>
+			<td>你好!你去哪儿啊？</td>
+			<td>Chào bạn! bạn đang đi đâu?</td>
+		</tr>
+		<tr>
+			<td>你好！你这段时间忙吗？</td>
+			<td>Xin chào! bạn dạo này có bận không?</td>
+		</tr>
+		<tr>
+			<td>你好！身体最近怎么样了？</td>
+			<td>Xin chào! dạo này có khỏe không?</td>
+		</tr>
+		<tr>
+			<td>祝你有美好的一天！</td>
+			<td>Chúc bạn ngày mới tốt lành!</td>
+		</tr>
+		<tr>
+			<td>你好！近况怎么样？</td>
+			<td>Xin chào, tình hình dạo này thế nào?</td>
+		</tr>
+		<tr>
+			<td>早上好！ 合家平安！</td>
+			<td>Chào buổi sáng! Cả nhà bình an!</td>
+		</tr>
+		<tr>
+			<td>怎么了? 您看完我所发的消息了吗？</td>
+			<td>Bạn thế nào rồi, đã tìm hiểu hết thông tin tôi gửi chưa</td>
+		</tr>
+		<tr>
+			<td>晚上好！</td>
+			<td>Chào buổi tối</td>
+		</tr>
+		<tr>
+			<td>你的头像好好看</td>
+			<td>Hình đại diện của bạn trông đẹp</td>
+		</tr>
+		<tr>
+			<td>我可以跟你聊一聊吗？</td>
+			<td>Mình có thể nói chuyện với bạn không?</td>
+		</tr>
+		<tr>
+			<td>你好，认识您我很高兴！</td>
+			<td>Rất vui khi được làm quen với bạn</td>
+		</tr>
+		<tr>
+			<td>下午好！</td>
+			<td>Chào buổi chiều</td>
+		</tr>
+		<tr>
+			<td>请问你是中国大陆人吗？</td>
+			<td>Xin hỏi bạn có phải là người Trung Quốc đại lục không?</td>
+		</tr>
+		<tr>
+			<td id="p8" class="tit2" colspan="3">Khuyến thiện
+			</td>
+		</tr>
+		<tr>
+			<td>我也关心您亲人，请帮我向他们转达这些信息</td>
+			<td>Tôi cũng quan tâm tới người thân của bạn, vậy hãy giúp tôi chuyển những thông tin này tới họ nhé</td>
+		</tr>
+		<tr>
+			<td>你为什么生气？</td>
+			<td>Sao bạn lại tức giận</td>
+		</tr>
+		<tr>
+			<td>你那边怎么样了？看完我发的这些重要有益的信息了吗？</td>
+			<td>Bạn thế nào rồi, đã đọc hết những thông tin hữu ích và quan trọng mà tôi gửi chưa?</td>
+		</tr>
+		<tr>
+			<td>我在海外看到许多在中国有关干旱、大洪水的信息。你那边有没有受影响？</td>
+			<td>Tôi ở Hải Ngoại xem được rất nhiều thông tin về hạn Hán, Lũ lụt ở Đại Lục, chỗ bạn có bị ảnh hưởng gì không?</td>
+		</tr>
+		<tr>
+			<td>你应该了解这些信息，因为你还要把这些信息告诉你亲朋好友。在困难时刻它能够帮你遇难呈祥、遇危为安。现在到处都不安全，天灾人祸不断，你应该寻找保护好自己的办法</td>
+			<td>Bạn cần tìm hiểu kỹ nhưng thông tin này bởi vì bạn còn cần phải nói với gia đình và người thân của bạn, nó sẽ giúp bạn bình an trong những lúc khó khăn, hiện tại thiên tai nhân họa rất nhiều, bạn cần tìm được phương cách bảo trọng</td>
+		</tr>
+		<tr>
+			<td>我一直希望你能看到你为知道的消息，这儿都为您好</td>
+			<td>Tôi rất muốn bạn biết những thông tin có thể bạn chưa biết, và rất tốt với bạn</td>
+		</tr>
+		<tr>
+			<td>请珍惜机会了解真相，得福报</td>
+			<td>Hãy trân quý cơ hội tìm hiểu chân tướng, đắc phúc báo</td>
+		</tr>
+		<tr>
+			<td>由于我没有很多时间，并且我也想跟更多其他中国人聊天，所以我发给您这个地址，这里面三退信息足够。</td>
+			<td>Bởi vì tôi không có nhiều thời gian và tôi cũng muốn dành thời gian nói chuyện với những người TQ khác, vậy nên tôi gửi bạn địa chỉ này, bạn vào đây sẽ có đầy đủ thông tin bạn tự tìm hiểu và làm tam thoái nhé!</td>
+		</tr>
+		<tr>
+			<td>在中共网络被封锁，所以请珍惜机会了解我发的信息</td>
+			<td>Ở Trung Quốc bị phong tỏa internet nên hãy trân quý cơ hội tìm hiểu thông tin tôi gửi</td>
+		</tr>
+		<tr>
+			<td>将心胸打开、倾听这些您会明白一切</td>
+			<td>Hãy mở rộng lòng mình, lắng nghe những điều này và bạn sẽ hiểu tất cả</td>
+		</tr>
+		<tr>
+			<td>我希望您能接到我的电话。我非常渴望能够跟您谈话。因为我知道我所说的是对您好</td>
+			<td>Tôi hy vọng bạn có thể nhận được cuộc gọi của tôi. Tôi rất háo hức có thể nói chuyện với bạn. Bởi vì tôi biết những gì tôi nói là tốt cho bạn</td>
+		</tr>
+		<tr>
+			<td>我偶尔在网上找到你，也许是我们的缘分。我想跟您聊更多</td>
+			<td>Tôi tình cờ tìm thấy bạn trên Internet, có lẽ đó là duyên phận của chúng ta. Tôi muốn nói chuyện nhiều hơn với bạn</td>
+		</tr>
+		<tr>
+			<td>你就冷静的考虑考虑。我会留下一些消息给您参考。改天我会跟你联系</td>
+			<td>Thôi bạn cứ tĩnh tâm suy nghĩ thêm, tôi sẽ để lại một số thông tin để bạn tham khảo thêm, có gì hôm khác tôi sẽ liên lạc lại</td>
+		</tr>
+		<tr>
+			<td>请给您家人看这些信息，他们值得得到平安。</td>
+			<td>Hãy gửi những thông tin này tới bạn bè và người thân trong gia đình bạn nhé, họ cũng xứng đáng được bình an</td>
+		</tr>
+		<tr>
+			<td>我发的消息里面，有的办法能帮你和家躲过困难时刻。现在天灾、大瘟疫到处都是，请把这些消息传给你亲朋好友</td>
+			<td>Trong những thông tin tôi gửi, có cách để giúp bạn cùng gia đình vượt qua những giai đoạn khó khăn, hiện tại thiên tai, đại dịch diễn ra ở khắp nơi, hãy chia sẻ điều tốt đẹp này cho những người thân của bạn!</td>
+		</tr>
+		<tr>
+			<td>您先冷静看看我所发的消息哦</td>
+			<td>Bạn cứ bình tĩnh, tĩnh tâm tìm hiểu các thông tin tôi gửi nhé</td>
+		</tr>
+		<tr>
+			<td>请告诉您身边的人也读这些信息，他们也会平安</td>
+			<td>Hãy giúp mọi người xung quanh bạn đọc được những thông tin này nhé, họ cũng sẽ được bình an</td>
+		</tr>
+		<tr>
+			<td>希望您走到哪裡，有老天神佛護佑您，您平安了我就放心了，咱們走到哪裡平安到哪裡</td>
+			<td>Tôi chỉ mong bạn sống tốt, hy vọng rằng bạn đi đến đâu cũng có Thần Phật che chở. Bạn bình an rồi thì tôi yên tâm, chúng ta đi đến nơi đâu cũng sẽ được bình an.</td>
+		</tr>
+		<tr>
+			<td>我真心希望你平安</td>
+			<td>Tôi thật tâm mong bạn bình an!</td>
+		</tr>
+		<tr>
+			<td id="p9" class="tit2" colspan="3">Kịch Bản Giao Tiếp 1
+			</td>
+		</tr>
+		<tr>
+			<td>我在学中文</td>
+			<td>Tôi đang học tiếng Trung</td>
+		</tr>
+		<tr>
+			<td>刚才我有急事！现在忙完了！</td>
+			<td>Lúc nãy tôi bận, hiện giờ tôi hết bận rồi!</td>
+		</tr>
+		<tr>
+			<td>加我微信吧！</td>
+			<td>Kết bạn lại với tôi nhé !</td>
+		</tr>
+		<tr>
+			<td>我看着新闻界，发现中国许多地方都发生了严重的洪灾。您最近在当地吗？你还好吗</td>
+			<td>Tôi xem báo chí thấy rất nhiều nơi ở TQ bị lũ lụt nghiêm trọng. Địa phương bạn thế nào? Bạn ổn chứ</td>
+		</tr>
+		<tr>
+			<td>你忙完了吗？能打电话聊天吗？</td>
+			<td>Hiện tại bạn rảnh chưa, gọi điện nói chuyện chút ?</td>
+		</tr>
+		<tr>
+			<td>我是非常珍惜您的生命才做这件事情</td>
+			<td>Tôi rất trân quý sinh mệnh của bạn nên tôi mới làm việc này</td>
+		</tr>
+		<tr>
+			<td>如果您珍惜您的生命，您冷静的了解并填上这表</td>
+			<td>Nếu bạn trân quý sinh mệnh của mình bạn hãy tĩnh tâm tìm hiểu và điền vào bảng này</td>
+		</tr>
+		<tr>
+			<td>早上好</td>
+			<td>Chào buổi sáng</td>
+		</tr>
+		<tr>
+			<td>那就好了！</td>
+			<td>Vậy tốt quá rồi!</td>
+		</tr>
+		<tr>
+			<td>我是南方人</td>
+			<td>Tôi là người phương Nam</td>
+		</tr>
+		<tr>
+			<td>祝你有美好的一天</td>
+			<td>Chúc một ngày tốt lành</td>
+		</tr>
+		<tr>
+			<td>晚安</td>
+			<td>Chúc ngủ ngon</td>
+		</tr>
+		<tr>
+			<td>晚上好</td>
+			<td>Chào buổi tối</td>
+		</tr>
+		<tr>
+			<td>传递给您真实信息与全世界的最新新闻。</td>
+			<td>Gửi bạn tin tức thời sự chân thực trên khắp thế giới mới nhất</td>
+		</tr>
+		<tr>
+			<td>我非常希望你能够知道你没有看过的信息。因为这儿完全是为你好的。你加入我们群组，好吗？</td>
+			<td>Tôi rất muốn bạn biết những thông tin có thể bạn chưa biết, và rất tốt với bạn, bạn vào nhóm của chúng tôi nhé!</td>
+		</tr>
+		<tr>
+			<td>真诚发给您这些重要真实消息，您一定要好好看哦</td>
+			<td>Gửi tặng bạn rất nhiều thông tin chân thực và quan trọng, bạn hãy tìm hiểu thật kỹ nhé</td>
+		</tr>
+		<tr>
+			<td>也许我的网络有点不好，让我问一个人给你打电话</td>
+			<td>Có thể wifi của tôi yếu , để tôi nhờ người gọi cho bạn</td>
+		</tr>
+		<tr>
+			<td>请回复我呀</td>
+			<td>Hãy trả lời tôi đi</td>
+		</tr>
+		<tr>
+			<td>您原谅哦！</td>
+			<td>Bạn thông cảm nhé!</td>
+		</tr>
+		<tr>
+			<td>新年快乐！</td>
+			<td>Chúc mừng năm mới!</td>
+		</tr>
+		<tr>
+			<td>我现在忙完了</td>
+			<td>Bây giờ tôi mới rảnh</td>
+		</tr>
+		<tr>
+			<td>我不会中文，我请朋友跟你聊聊哦。我们一起沟通交流!</td>
+			<td>Tôi không đọc hiểu tiếng Trung lắm nên tôi nhờ bạn của tôi vào nói chuyện cùng nhé! Chúng ta cùng giao lưu!</td>
+		</tr>
+		<tr>
+			<td>我看不懂中文，明天下午我给您打电话好吗？</td>
+			<td>Tôi đọc không hiểu tiếng Trung lắm chiều mai tôi gọi lại cho bạn nhé ?</td>
+		</tr>
+		<tr>
+			<td>我看不懂中文，明天上午我给您打电话哦！</td>
+			<td>Tôi đọc không hiểu tiếng Trung lắm sáng mai tôi gọi lại cho bạn nhé !</td>
+		</tr>
+		<tr>
+			<td>我看不懂中文，晚上给你打电话好吗？</td>
+			<td>Tôi đọc không hiểu tiếng Trung lắm tối tôi gọi lại cho bạn nhé ?</td>
+		</tr>
+		<tr>
+			<td>我看不懂中文，过一会我给您打电话，好吗？</td>
+			<td>Tôi đọc không hiểu tiếng Trung lắm lát nữa tôi gọi lại cho bạn nhé ?</td>
+		</tr>
+		<tr>
+			<td>你忙吗？改天再给您打哦！</td>
+			<td>Bạn bận à, vậy lúc khác gọi lại cho bạn nhé, tạm biệt!</td>
+		</tr>
+		<tr>
+			<td>你有空吗？我们打电话聊聊好吗？</td>
+			<td>Bạn có rảnh không, tôi gọi điện cho bạn nói chuyện nhé ?</td>
+		</tr>
+		<tr>
+			<td>打字聊不方便，我给你打电话好吗？</td>
+			<td>Chát không tiện, tôi gọi điện cho bạn nhé!</td>
+		</tr>
+		<tr>
+			<td>我现在有点忙，您什么时候有空，我再给您打！</td>
+			<td>Bây giờ tôi bận chút, hẹn bạn lúc rảnh tôi sẽ gọi lại nhé !</td>
+		</tr>
+		<tr>
+			<td>我只会这几个问候句，你跟我朋友聊哦！</td>
+			<td>Tôi chỉ biết mấy câu giao tiếp này, để nói chuyện nhiều hơn bạn chát với bạn của tôi nhé (gửi thẻ liên hệ)</td>
+		</tr>
+		<tr>
+			<td>现在聊不太方便。我们改天再聊哦</td>
+			<td>Giờ chat không tiện lắm, xin phép nói chuyện sau với bạn nhé</td>
+		</tr>
+		<tr>
+			<td>我现在忙了， 我们改天再聊哦</td>
+			<td>Bây giờ tôi có việc bận, chúng ta nói chuyện sau nhé</td>
+		</tr>
+		<tr>
+			<td>请问我发给您的信息您看了吗？我再给您发这些新信息。</td>
+			<td>Bạn đã xem hết thông tin tôi gửi chưa? Tôi xin phép gửi thêm cho bạn môt chút thông tin nữa nhé.</td>
+		</tr>
+		<tr>
+			<td>我这号被限制了，我用别的号来跟您打，可以吗</td>
+			<td>Nick này đang hạn chế, bạn nghe tôi gọi từ nick này nhé.</td>
+		</tr>
+		<tr>
+			<td>方便聊聊天吗？</td>
+			<td>Bây giờ nói chuyện được không?</td>
+		</tr>
+		<tr>
+			<td>下午好</td>
+			<td>Chào buổi chiều</td>
+		</tr>
+		<tr>
+			<td>嗨！在吗？</td>
+			<td>Bạn có đó không!</td>
+		</tr>
+		<tr>
+			<td>很高兴认识您</td>
+			<td>Rất vui được làm quen với bạn</td>
+		</tr>
+		<tr>
+			<td>稍等，我挂了再发个邀请</td>
+			<td>Bạn chờ nhé, tôi tắt đi rồi gọi lại cho bạn</td>
+		</tr>
+		<tr>
+			<td id="p10" class="tit2" colspan="3">Kịch bản giao tiếp 2
+			</td>
+		</tr>
+		<tr>
+			<td>您的举手之劳就可以让更多人翻阅红墙，了解墙外真实资讯，希望您帮忙！</td>
+			<td>[Nếu cs đồng ý] Sự giúp đỡ của bạn có thể khiến nhiều người hiểu được sự thật. Hi vọng bạn giúp đỡ</td>
+		</tr>
+		<tr>
+			<td>我们这个群里面每天更新海外最新真实资讯，您进群以后也希望您转发群二维码给您所在的一些微信群！</td>
+			<td>[Nếu cs đồng ý] Trong Nhóm này của chúng tôi hàng ngày cập nhật các tin tức sự thật mới nhất. Sau khi bạn vào nhóm hi vọng bạn hãy gửi mã qr này đến các nhóm mà bạn có.</td>
+		</tr>
+		<tr>
+			<td>我拉你进去哦？</td>
+			<td>[Nếu kết bạn thành công] Tôi kéo bạn vào nhóm nhé?</td>
+		</tr>
+		<tr>
+			<td>群里都传海外真实消息的 墙内媒体不透明。你多看多听多了解群里的消息。对你有好处的。</td>
+			<td>[Nếu kết bạn thành công] Trong nhóm gửi các tin sức sự thật từ hải ngoại. Truyền thông trong nước không xác thực. bạn xem nhiều nghe nhiều hiểu nhiều tin tức trong nhóm. Là có chỗ tốt cho bạn</td>
+		</tr>
+		<tr>
+			<td>你好！在群里找到你！我们加好友吧!</td>
+			<td>[Câu gửi kết bạn] Chào bạn. Tôi thấy bạn trong nhóm. Chúng ta kết bạn đi. Tôi không làm quảng cáo. Muốn trao đổi nhóm thời sự hãy liên hệ tôi.</td>
+		</tr>
+		<tr>
+			<td>我不做广告。想换执政群联系我。</td>
+			<td>[Câu gửi kết bạn] Tôi không làm quảng cáo. Muốn trao đổi nhóm thời sự hãy liên hệ tôi.</td>
+		</tr>
+		<tr>
+			<td>有句話說“千金難買早知道”多看多聽不吃虧，加你就是想送給您國內不讓老百姓知道的信息，保護好自己和家人.</td>
+			<td>[Nếu cs không đồng ý] Có câu nói “thiên kim nan mãi tảo chi đạo” (nghĩa là trăm nghìn tiền vàng cũng khó mua được việc biết được thông tin sớm) càng nhìn nhiều càng nghe nhiều sẽ không phải chịu thiệt, kết bạn là vì muốn tặng bạn tin tức mà trong nước không cho dân thường chúng ta đọc được, bảo vệ tốt bản thân mình và gia đình.</td>
+		</tr>
+		<tr>
+			<td>现在形式变化很大的。你可千万不要掉以轻心。</td>
+			<td>[Nếu cs không đồng ý] Hiện tại tình thế biến hoá rất lớn. Bạn ngàn vạn lần đừng lơ là.</td>
+		</tr>
+		<tr>
+			<td>好！不勉强！不勉强！</td>
+			<td>[Nếu cs không đồng ý] Được! Không miễn cưỡng! không miễn cưỡng!</td>
+		</tr>
+		<tr>
+			<td>我的祝福藏在信息里，快打开看看吧</td>
+			<td>[Gửi lịch sử chat] Lời chúc của tôi ở trong tin nhắn, mau mở ra xem nhé</td>
+		</tr>
+		<tr>
+			<td>你好！你要进群吗？</td>
+			<td>[Nếu kết bạn thành công] Chào bạn! Bạn muốn vào nhóm không</td>
+		</tr>
+		<tr>
+			<td>我只是想多交朋友，不是为发广告的，放心吧</td>
+			<td>[Hỏi sao biết được tài khoản của họ] Tôi chỉ muốn kết bạn, không làm quảng cáo, bạn yên tâm nhé.</td>
+		</tr>
+		<tr>
+			<td>你扫码进群哦！</td>
+			<td>[Nếu cs đồng ý] Bạn quét mã qr vào nhóm nhé!</td>
+		</tr>
+		<tr>
+			<td>有什么有意思的群组，也希望你可以把我加进去</td>
+			<td>[Xin nhóm] Nếu có nhóm gì hay cũng mong bạn kéo tôi vào nhóm.</td>
+		</tr>
+	</tbody>
+</table>
+	</div>
+</body>
+</html>

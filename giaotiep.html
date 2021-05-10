@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Giao tiếp 1</title>
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="c/c.css">
+</head>
+<body class="w640">
+	<script type="text/javascript" src="j/j.js"></script>
+	<script type="text/javascript" src="j/menuhead.js"></script>
+	<script type="text/javascript" src="j/menu.js"></script>
+	<script>
+		$(document).ready( function(){
+
+			$(".tit2").each( function(){
+				var txt = $(this).text();
+				var id = $(this).attr("id");
+				$("#chude").append(new Option(txt, id));
+			})
+
+			$(document).on("change", "#chude" , function() {
+				var id = $(this).val();
+				$('html, body').animate({scrollTop:$('#'+id).position().top - 100}, 'slow');
+			});
+
+			$(window).bind('scroll', function () {
+				if ($(window).scrollTop() > 150) {
+					$('#chude').addClass('fixed');
+				} else {
+					$('#chude').removeClass('fixed');
+				}
+			});
+
+		})
+	</script>
+	<style>
+		td.tit2+td{ display: none; }
+		#chude{ display: block; padding: 10px; font-size: 0.8rem; width: 98%; margin: 0 0 0.5rem 0;  }
+		#chude option{ font-size: 0.8rem; }
+		#chude.fixed{ top:0; left: 0; z-index: 99; position: fixed; }
+	</style>
+	<div id="content">
+		<p style="padding: 0.3rem;">Lưu ý: trên Xiwang nên sử dụng các sticker và các emotion để cho cuộc trò chuyện thêm sinh động.</p>
+		<p style="padding: 0.3rem;">Khi đã chọn được câu cần dùng, click đúp (trên PC) hoặc chạm 2 lần (trên ĐT) vào câu đó, nếu chuyển màu xanh lam là đã copy thành công.</p>
+		<h2 class="tit">Tình huống hay gặp</h2>
+
+		<select id="chude">
+			<option value="">Chọn chủ đề</option>
+		</select>
+
+		<table id="tblList">
+			<tbody>
+				<tr>
+					<td id="p1" class="tit2" colspan="3">Gửi lời mời kết bạn</td>
+				</tr>
+				<tr>
+					<td>你好！在群里找到你！我们加好友吧!</td>
+					<td>Chào bạn. Tôi thấy bạn trong nhóm. Chúng ta kết bạn đi.</td>
+				</tr>
+				<tr>
+					<td>我不做广告。想换执政群联系我。</td>
+					<td>Tôi không làm quảng cáo. Muốn trao đổi nhóm thời sự hãy liên hệ tôi.</td>
+				</tr>
+				<tr>
+					<td>我不认识你，我们是群友，咱们当好友吧。</td>
+					<td>Tôi không biết bạn là ai, chúng ta cùng trong một nhóm, chúng ta làm bạn nhé.</td>
+				</tr>
+				<tr>
+					<td id="p2" class="tit2" colspan="3">Gửi nhóm khi kết bạn thành công</td>
+				</tr>
+				<tr>
+					<td>你好</td>
+					<td>chào bạn (có thể thêm icon biểu thị cảm xúc)</td>
+				</tr>
+				<tr>
+					<td>很高兴成为好友 </td>
+					<td>rất vui được kết bạn với bạn</td>
+				</tr>
+				<tr>
+					<td>你好！你要进群吗？</td>
+					<td>Chào bạn, Bạn muốn vào nhóm không</td>
+				</tr>
+				<tr>
+					<td>我跟您跟想一个时政群，国内从来没有报道过的信息</td>
+					<td>Tôi sẽ tặng bạn một nhóm tin tức, sự kiện trong nước không bao giờ đưa tin. 	</td>
+				</tr>
+				<tr>
+					<td>因为墙内被封锁，让大家不知道真相</td>
+					<td>Bởi vì trong nước mạng bị phong tỏa, không biết về tin chân thật. Tôi tặng bạn một nhóm được biết thông tin. 	</td>
+				</tr>
+				<tr>
+					<td>你好啊！很高兴认识您 :我不是推销产品的，您放心哦。咱们是一个群的群友 </td>
+					<td>chào bạn! rất vui được quen với bạn, tôi không phải là bán hàng, bạn yên tâm. Chúng ta là bạn trong cùng  nhóm</td>
+				</tr>
+				<tr>
+					<td>您好，很高興認識您，多一個朋友多一條路，希望您牛年大吉。</td>
+					<td>Chào bạn, rất vui được làm quen với bạn, thêm một người bạn là thêm một con đường, hy vọng năm con trâu bạn đại cát.</td>
+				</tr>
+				<tr>
+					<td>我們是一個群的群友，碰到是緣分，我不是向您推銷產品的，您放心，就是希望有緣的朋友平安幸福美好快樂 </td>
+					<td>chúng ta là bạn trong cùng một nhóm, gặp nhau là duyên phận, tôi không phải là giới thiệu sản phẩm, bạn yên tâm, chỉ hy vọng bạn cùng tôi có duyên, được bình an hạnh phúc, mỹ hảo, vui vẻ.</td>
+				</tr>
+				<tr>
+					<td>人山人海中碰到是緣分，就是希望你好，跟你一樣，有空聊聊微信 </td>
+					<td>trong biển người mà gặp được nhau thì chính là duyên phận, chỉ là hi vọng bạn được tốt, cũng giống như bạn, có thời gian thì nói chuyện trong wechat nhé.</td>
+				</tr>
+				<tr>
+					<td>群里都传海外真实消息的
+						墙内媒体不透明。你多看多听多了解群里的消息。对你有好处的。
+					我拉你进去哦？</td>
+					<td>Trong nhóm gửi các tin sức sự thật từ hải ngoại
+						Truyền thông trong nước không xác thực. bạn xem nhiều nghe nhiều hiểu nhiều tin tức trong nhóm. Là có chỗ tốt cho bạn
+					Tôi kéo bạn vào nhóm nhé?</td>
+				</tr>
+				<tr>
+					<td>想了解海外情况，请扫码进群</td>
+					<td>Muốn tìm hiểu tình hình ngoài nước, hãy quét mã vào nhóm</td>
+				</tr>
+				<tr>
+					<td>更新真实消息，请进群</td>
+					<td>Cập nhật tin tức chân thật, hãy vào nhóm</td>
+				</tr>
+				<tr>
+					<td>天地有什么神奇，扫码就知道</td>
+					<td>Thiên địa có gì thần kỳ, quét mã là biết</td>
+				</tr>
+				<tr>
+					<td>多条朋友多条路，很高兴认识你啊 </td>
+					<td>càng nhiều bạn thì càng có nhiều con đường lựa chọn, rất vui được làm quen với bạn</td>
+				</tr>
+				<tr>
+					<td>你好，我是谁谁谁，现在居住在哪哪哪，很高兴认识你</td>
+					<td>chào bạn, tôi là ai ai ai, bây giờ tôi đang sống ở đâu đâu đâu. Rất vui được làm quen với bạn</td>
+				</tr>
+				<tr>
+					<td>你好，我刚用微信不久，很开心你同意加我好友</td>
+					<td>chào bạn, tôi mới dùng wechat chưa lâu, rất vui vì bạn đồng ý kết bạn tôi (chỉ phù hợp với số mới)</td>
+				</tr>
+				<tr>
+					<td>我之后想加你进一个群，会分享一些国内国外有意思的内容 </td>
+					<td>tôi muốn kết bạn vào  group, cùng chia sẻ với nhau những nội dung có ý nghĩa trong và ngoài nước</td>
+				</tr>
+				<tr>
+					<td>网络一线牵，哈哈，很高兴认识你 </td>
+					<td>một sợi mạng nối với nhau, haha, rất vui được làm quen với bạn</td>
+				</tr>
+				<tr>
+					<td>刚刚看了你的朋友圈，很有意思。</td>
+					<td>mới xem danh sách bạn của bạn, rất có ý nghĩa</td>
+				</tr>
+				<tr>
+					<td>很高兴多一个网友 </td>
+					<td>rất vui lại có nhiều hơn  người bạn trên mạng</td>
+				</tr>
+				<tr>
+					<td>很高兴交到新的朋友 </td>
+					<td>rất vui được gặp bạn mới</td>
+				</tr>
+				<tr>
+					<td>我加你希望方便分享给你有意思的内容，包括国内看不到的禁闻啊 </td>
+					<td>tôi kết bạn hi vọng có thể cùng nhau chia sẻ những nội dung hay có ý nghĩa, bao gồm những tin tức bị cấm mà trong nước không nhìn thây được</td>
+				</tr>
+				<tr>
+					<td>咱之前是群友，很开心现在成为你的网友 </td>
+					<td>chúng ta trước đây là bạn trong cùng nhóm, rất vui bây giờ trở thành bạn </td>
+				</tr>
+				<tr>
+					<td>我是生活在国外的中国人，很开心你同意加我好友 </td>
+					<td>tôi là người Trung Quốc sống ở nươc ngoài, rất vui bạn đồng ý kết bạn tôi làm bạn.</td>
+				</tr>
+				<tr>
+					<td>有句話說“千金難買早知道”多看多聽不吃虧，加您就是想送給您國內不讓老百姓知道的信息，保護好自己和家人 </td>
+					<td>có câu nói “thiên kim nan mãi tảo chi đạo” (nghĩa là trăm nghìn tiền vàng cũng khó mua được việc biết được thông tin sớm) càng nhìn nhiều càng nghe nhiều sẽ không phải chịu thiệt, kết bạn là vì muốn tặng bạn tin tức mà trong nước không cho dân thường chúng ta đọc được, bảo vệ tốt bản thân mình và gia đình.</td>
+				</tr>
+				<tr>
+					<td id="p3" class="tit2" colspan="3">Họ đồng ý</td>
+				</tr>
+				<tr>
+					<td>你扫码进群哦！</td>
+					<td>Bạn quét mã qr vào nhóm nhé!</td>
+				</tr>
+				<tr>
+					<td>我们这个群里面每天更新海外最新真实资讯，您进群以后也希望您转发群二维码给您所在的一些微信群！
+					您的举手之劳就可以让更多人翻阅红墙，了解墙外真实资讯，希望您帮忙！</td>
+					<td>Trong Nhóm này của chúng tôi hàng ngày cập nhật các tin tức sự thật mới nhất. Sau khi bạn vào nhóm hi vọng bạn hãy gửi mã qr này đến các nhóm mà bạn có. 
+					Sự giúp đỡ của bạn có thể khiến nhiều người hiểu được sự thật. Hi vọng bạn giúp đỡ</td>
+				</tr>
+				<tr>
+					<td id="p4" class="tit2" colspan="3">Họ không đồng ý</td>
+				</tr>
+				<tr>
+					<td>好！不勉强！不勉强！
+						现在形式变化很大的。你可千万不要掉以轻心。
+					有句話說“千金難買早知道”多看多聽不吃虧，加你就是想送給您國內不讓老百姓知道的信息，保護好自己和家人.</td>
+					<td>Được! Không miễn cưỡng! không miễn cưỡng!
+						Hiện tại tình thế biến hoá rất lớn. Bạn ngàn vạn lần đừng lơ là.
+					có câu nói “thiên kim nan mãi tảo chi đạo” (nghĩa là trăm nghìn tiền vàng cũng khó mua được việc biết được thông tin sớm) càng nhìn nhiều càng nghe nhiều sẽ không phải chịu thiệt, kết bạn là vì muốn tặng bạn tin tức mà trong nước không cho dân thường chúng ta đọc được, bảo vệ tốt bản thân mình và gia đình.</td>
+				</tr>
+				<tr>
+					<td id="p5" class="tit2" colspan="3">Xin nhóm</td>
+				</tr>
+				<tr>
+					<td>有什么有意思的群组，也希望你可以把我加进去.</td>
+					<td>Nếu có nhóm gì hay cũng mong bạn kéo tôi vào nhóm.</td>
+				</tr>
+				<tr>
+					<td>你好，我这个人喜欢养生，我如果看到好的养生帖，分享给你啊 </td>
+					<td>chào bạn, tôi là người rất thích dưỡng sinh, nếu như tôi nhìn thấy tin dưỡng sinh nào hay thì chia sẻ cho bạn nhé</td>
+				</tr>
+				<tr>
+					<td>你好，你是一个新手妈妈吗，我若看到好的育儿帖分享给你啊</td>
+					<td>chào bạn, bạn là bà mẹ bỉm sửa à, Tôi nếu thấy tin tức về nuôi dạy con sẽ chia sẻ cho bạn</td>
+				</tr>
+				<tr>
+					<td>很开心成为网友，有什么有意思的群组或消息，可以把我加进去，或发给我奥 </td>
+					<td>rất vui trở thành bạn trên mạng, có tin tức gì hay của group thì cho tôi vào nhé, có thể gửi cho tôi</td>
+				</tr>
+				<tr>
+					<td>好开心，大家有时间多分享有意思的消息啊 </td>
+					<td>rất vui, mọi người có thời gian thì cùng nhau chia sẻ thông tin thú vị nhé</td>
+				</tr>
+				<tr>
+					<td>请拉我进你所在的群</td>
+					<td>Bạn kéo tôi vào nhóm bạn của bạn nhé. 	</td>
+				</tr>
+				<tr>
+					<td>我想再群聊沟通交流，学习。你有群能否拉我一下</td>
+					<td>Tôi muốn giao lưu, học hỏi bạn có nhóm nào kéo tôi vào với nhé. 	</td>
+				</tr>
+				<tr>
+					<td id="p6" class="tit2" colspan="3">Gủi lịch sử chat</td>
+				</tr>
+				<tr>
+					<td>我的祝福藏在信息里，快打开看看吧</td>
+					<td>lời chúc của tôi ở trong tin nhắn, mau mở ra xem nhé</td>
+				</tr>
+				<tr>
+					<td  id="p7" class="tit2" colspan="3">Họ hỏi sao biết tài khoản của họ</td>
+				</tr>
+				<tr>
+					<td>我只是想多交朋友，不是为发广告的，放心吧	</td>
+					<td>tôi chỉ muốn kết bạn, không làm quảng cáo, bạn yên tâm nhé.
+					</td>
+				</tr>
+				<tr>
+					<td id="p8" class="tit2" colspan="3">Giao tiếp ngắn</td>
+				</tr>
+				<tr>
+					<td>嗨，早！</td>
+					<td>hi, chào buổi sáng</td>
+				</tr>
+				<tr>
+					<td>早上好！</td>
+					<td>chào buổi sáng</td>
+				</tr>
+				<tr>
+					<td>晚上好！</td>
+					<td>chào buổi tối</td>
+				</tr>
+				<tr>
+					<td>美好的一天！</td>
+					<td>chúc ngày tốt lành</td>
+				</tr>
+				<tr>
+					<td>分享个信息给您</td>
+					<td>chia sẻ với bạn  tin nhé</td>
+				</tr>
+				<tr>
+					<td>送个好运给您</td>
+					<td>tặng bạn may mắn này</td>
+				</tr>
+				<tr>
+					<td>您听听这个</td>
+					<td>bạn nghe cái này</td>
+				</tr>
+				<tr>
+					<td>您看看这个</td>
+					<td>bạn xem cái này</td>
+				</tr>
+				<tr>
+					<td>开心最重要，明白就有福 </td>
+					<td>vui vẻ là quan trọng nhất, minh bạch chính là phúc</td>
+				</tr>
+				<tr>
+					<td>一天的开始送上我的祝福 </td>
+					<td>một ngày mới bắt đầu tặng đến tôi  lời chúc phúc</td>
+				</tr>
+				<tr>
+					<td>信息开启  好运到来 </td>
+					<td>tin tức bắt đầu, vận may bắt đầu đến</td>
+				</tr>
+				<tr>
+					<td>我的祝福藏在信息里，快打开看看吧</td>
+					<td>lời chúc của tôi ở trong tin nhắn, mau mở ra xem nhé</td>
+				</tr>
+				<tr>
+					<td>愿我的祝福带给你一天的好心情</td>
+					<td>mong lời chúc phúc của tôi mang đến cho bạn một tâm tình tốt</td>
+				</tr>
+				<tr>
+					<td>快来看信吧，转好运啦</td>
+					<td>mau đến đây, sắp đổi vận rồi</td>
+				</tr>
+				<tr>
+					<td>转运信息，祝您九九如意</td>
+					<td>tin tức đổi vận, chúc bạn cửu cửu như ý</td>
+				</tr>
+				<tr>
+					<td>叮咚一声响，好运幸福来.朋友，接福啦</td>
+					<td>âm thanh ting ting, vận tốt phúc đến  , bạn ơi, nhận lấy phúc này</td>
+				</tr>
+				<tr>
+					<td id="p9" class="tit2" colspan="3">Giao tiếp cơ bản</td>
+				</tr>
+				<tr>
+<td>怎么了？你看完我发给你的这些重要消息了嘛？</td>
+<td>Bạn thế nào rồi, đã đọc hết những thông tin hữu ích và quan trọng mà tôi gửi chưa?</td>
+</tr>
+<tr>
+<td>你可不可以上这些网站？</td>
+<td>Bạn có vào được các trang web này không!</td>
+</tr>
+ 
+<tr>
+<td>你打开这些个链接看一看。</td>
+<td>Bạn hãy mở những link trên xem xem</td>
+</tr>
+<tr>
+<td>请告诉您身边的人也读这些信息，他们也会平安</td>
+<td>Hãy giúp mọi người xung quanh bạn đọc được những thông tin này nhé, họ cũng sẽ được bình an.</td>
+</tr>
+<tr>
+<td>如果打不开，你就试试这个链接吧</td>
+<td>Nếu không vào được hãy thử vào cái này</td>
+</tr>
+<tr>
+<td>送您有意义的信息，您仔细看，有需要可以跟我聊哦。</td>
+<td>Tặng bạn những thông tin hữu ích, bạn đọc kỹ rồi có thắc mắc gì chát lại với tôi nhé,</td>
+</tr>
+<tr>
+<td>你进得去这群吗？</td>
+<td>Bạn có vào được nhóm này không?</td>
+</tr>
+<tr>
+<td>请进这群！有很多对你有帮助的真实消息</td>
+<td>Mời bạn vào nhóm này, tôi thấy có nhiều thông tin chân thực hữu ích với bạn.</td>
+</tr>
+<tr>
+<td>打扰您我很对不起。我只是想给您带来更美好的。</td>
+<td>Rất xin lỗi nếu tôi có làm phiền bạn. Tôi chỉ muốn đem những điều tốt đẹp đến với bạn</td>
+</tr>
+<tr>
+<td>如果您不想接受更多信息那请跟我说，打扰您我很对不起。</td>
+<td>Nếu bạn không muốn nhận nữa xin hãy nói với tôi, rất xin lỗi nếu tôi có làm phiền bạn.</td>
+</tr>
+<tr>
+<td>你发给你这些真实信息吧。</td>
+<td>Tôi gửi bạn thông tin chân thật này nhé</td>
+</tr>
+<tr>
+<td>我们所做的目的呢，就是让大陆人明白佛法真相，得福报。</td>
+<td>Chúng tôi cố gắng làm việc này chỉ vì muốn nói với bạn những thông tin chân thật</td>
+</tr>
+<tr>
+<td>通过翻墙软件你可以看到海外的消息。</td>
+<td>Bạn đã có phần mềm vượt tường lửa để có thể đọc được tin tức chân thực từ nước ngoài không!</td>
+</tr>
+				<tr>
+					<td>我是外国人，中文不太好，有时候还得用谷歌翻译，如果不太通顺你别介意啊 </td>
+					<td>tôi là người nước ngoài, tiếng Trung không được tốt, có lúc còn phải dùng google để dịch, nếu không được thuận thì bạn đừng để ý nhé</td>
+				</tr>
+				<tr>
+					<td>我很喜欢中国，喜欢中国的文化 </td>
+					<td>tôi rất thích TQ, thích văn hóa TQ</td>
+				</tr>
+				<tr>
+					<td>我很喜欢交中国朋友，很喜欢分享有意思的东西 </td>
+					<td>tôi rất thích các bạn TQ, rất thích  chia sẻ những thứ có ý nghĩa</td>
+				</tr>
+				<tr>
+					<td>如果我之后建一个群，我把你也拉进去，好吗？</td>
+					<td>nếu như tôi vào nhóm khác sẽ kéo bạn vào nhé</td>
+				</tr>
+				<tr>
+					<td>我只是想多交朋友，不是为发广告的，放心吧 </td>
+					<td>tôi chỉ muốn kết bạn, không làm quảng cáo, bạn yên tâm nhé.</td>
+				</tr>
+				<tr>
+					<td>我在国外越南，可以和你分享海外风情 </td>
+					<td>tôi ở nước ngoài (Việt Nam), tôi có thể chia sẻ với bạn tình hình ở nước ngoài</td>
+				</tr>
+				<tr>
+					<td>我在国外越南，这里景色很美 </td>
+					<td>tôi ở nước ngoài (Việt Nam), phong cảnh ở đây rất đẹp</td>
+				</tr>
+				<tr>
+					<td>我朋友圈里有很多这方面的内容，有时间可以看看</td>
+					<td>trong danh sách bạn bè của tôi có rất nhiều nội dung về phương diện này, có thời gian bạn có thể xem một chút</td>
+				</tr>
+				<tr>
+					<td>很高兴认识益友 </td>
+					<td>rất vui được làm quen với bạn tốt</td>
+				</tr>
+				<tr>
+					<td>有益的朋友多多为善 </td>
+					<td>càng nhiều bạn tốt càng tốt</td>
+				</tr>
+				<tr>
+					<td>我在这方面有些见解，有时间可以和你分享一下 </td>
+					<td>vấn đề này tôi cũng có một số lý giải, có thời gian có thể sẽ chia sẻ với bạn chút</td>
+				</tr>
+				<tr>
+					<td>英雄所见略同，很开心我们有相同的见解 </td>
+					<td>cách nghĩ của anh hùng thường rất khác, rất vui vì chúng ta có cách lý giải giống nhau</td>
+				</tr>
+				<tr>
+					<td id="p10" class="tit2" colspan="3">Các câu chúc - lời khen</td>
+				</tr>
+				<tr>
+					<td>朋友，初次见面，愿好运常伴你身旁 </td>
+					<td>bạn à, lần đầu gặp mặt, mong bạn thường được gặp may mắn</td>
+				</tr>
+				<tr>
+					<td>来也匆匆，去也匆匆，有幸跟您加上朋友，跟您问个好 </td>
+					<td>đến vội vàng, đi cũng vội vàng, có vinh hạnh được bạn kết bạn làm bạn tốt, gửi lời chào đến bạn.</td>
+				</tr>
+				<tr>
+					<td>向您问个好，牛年希望我们生活步步高，好运天天交，口味顿顿好! </td>
+					<td>Gửi lời chào đến bạn, năm con trâu hi vọng cuộc sống của chúng ta sẽ cao hơn. Ngày nào cũng có vận may đến.</td>
+				</tr>
+				<tr>
+					<td>向您问个好，事事如您愿</td>
+					<td>Chào bạn, chúc bạn vạn sự như ý</td>
+				</tr>
+				<tr>
+					<td>愿一个问候带给你一个新的心情，愿一个祝福带给你一个新的起点。</td>
+					<td>Mong lời hỏi thăm mang đến cho bạn tâm tình mới, mong một lời chúc mang đến cho bạn khởi đầu mới.</td>
+				</tr>
+				<tr>
+					<td>梦想在向你奔跑，幸福在向你靠拢。早安。</td>
+					<td>Ước mơ đang chạy đến bên bạn, hạnh phúc đang kề bên bạn, chào buổi sáng!</td>
+				</tr>
+				<tr>
+					<td>在这美丽的时刻遇见您，是缘分的开启 </td>
+					<td>trong thời khắc mỹ lệ thế này gặp được bạn đúng là khởi đầu của một duyên phận</td>
+				</tr>
+				<tr>
+					<td>带给无限的希望让我碰上您，很开心😃早安!午安晚安 </td>
+					<td>trong niềm hy vọng vô hạn mang tôi đến gặp bạn, rất vui, chào buoir sáng, chào buổi chiều, chúc ngủ ngon</td>
+				</tr>
+				<tr>
+					<td>你很善良</td>
+					<td>Bạn rất thiện lương!</td>
+				</tr>
+				<tr>
+					<td>你很聪明</td>
+					<td>Bạn rất thông minh!</td>
+				</tr>
+					<tr>
+					<td>你很精明</td>
+					<td>Bạn là người thông thái</td>
+				</tr>
+				<tr>
+					<td>祝你快乐，幸福，健康</td>
+					<td>Chúc bạn vui vẻ, hạnh phúc, mạnh khỏe!</td>
+				</tr>
+				<tr>
+					<td>你很善良，一定会得福报</td>
+					<td>Bạn thiện lương nhất định sẽ nhận được phúc báo!.</td>
+				</tr>
+				<tr>
+					<td>很高兴😊加上好友，</td>
+					<td>rất vui được kết bạn</td>
+				</tr>
+				<tr>
+					<td>愿您天天开心如意。</td>
+					<td>Chúc bạn ngày nào cũng vui vẻ như ý muốn</td>
+				</tr>
+				<tr>
+					<td>托美丽的霞光，道一声早安。很高兴您能加我为好友 </td>
+					<td>nhờ ánh nắng măt trời đẹp đẽ, chào một câu “chào buổi sáng. Rất vui có thể trở thành bạn của bạn</td>
+				</tr>
+				<tr>
+					<td id="p11" class="tit2" colspan="3">Tạm biệt</td>
+				</tr>
+				<tr>
+					<td>祝你过的开心啊， </td>
+					<td>chúc bạn luôn vui vẻ, tạm biệt</td>
+				</tr>
+				<tr>
+					<td>天天好心情 </td>
+					<td>ngày nào cũng vui nhé</td>
+				</tr>
+				<tr>
+					<td>我们有时间可以再聊啊， </td>
+					<td>chúng ta có thời gian lại nói chuyện nhé, tạm biệt</td>
+				</tr>
+				<tr>
+					<td>谢谢你同意加我好友 </td>
+					<td>cảm ơn bạn đồng ý kết bạn tôi</td>
+				</tr>
+				<tr>
+					<td>工作中，回头聊 </td>
+					<td>đang làm việc, lúc khác nói chuyện nhé</td>
+				</tr>
+				<tr>
+					<td>回聊，拜拜 </td>
+					<td>lúc khác nói chuyện nhé, bye bye</td>
+				</tr>
+				<tr>
+					<td>在外面，回头发语音或视频啊 </td>
+					<td>đang ở bên ngoài, lúc khác gửi hội thoại hoặc video nhé</td>
+				</tr>
+				<tr>
+					<td>很晚了，要睡了，晚安啊 </td>
+					<td>rất muộn rồi, phải ngủ thôi, chúc ngủ ngon</td>
+				</tr>
+				<tr>
+					<td>今天特别忙，回聊 </td>
+					<td>hôm nay rất bận, lúc khác nói chuyện nhé</td>
+				</tr>
+				<tr>
+					<td>我朋友圈有新的更新，可以看看，回聊 </td>
+					<td>trong danh sách bạn của tôi có cập nhật mới, có thể xem qua, lúc khác nói chuyện nhé</td>
+				</tr>
+				<tr>
+					<td>拜了 </td>
+					<td>tạm biệt nhé</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
