@@ -38,6 +38,7 @@ var myvar = '<div id="head">'+
 '		<a href="giaotiep.html">Các câu giao tiếp</a>'+
 '		<a href="giaotiep2.html">Các câu giao tiếp 2</a>'+
 '		<a href="moment.html">Đăng khoảnh khắc</a>			'+
+'   <a href="nhanvat.html">Nhân vật</a>      '+
 '		<a href="groupname.html">Đặt tên nhóm</a>			'+
 '		<a href="group.html">Các câu quản lý nhóm</a>'+
 '	</div>';
