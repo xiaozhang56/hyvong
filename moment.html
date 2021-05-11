@@ -14,60 +14,60 @@
 	<script type="text/javascript" src="j/menuhead.js"></script>
 	<script>
 		$(document).ready( function(){
-			function randimg(){
-				var animal = "i/animal/" + Math.floor(Math.random() * 70);
-				var art = "i/art/" + Math.floor(Math.random() * 34);
-				var flower = "i/flower/" + Math.floor(Math.random() * 348);
-				var flower2 = "i/flower2/" + Math.floor(Math.random() * 411);
-				var food = "i/food/" + Math.floor(Math.random() * 56);
-				var girl = "i/girl/" + Math.floor(Math.random() * 166);
-				var travel = "i/travel/" + Math.floor(Math.random() * 203);
-				$("#animal").attr("src", animal +".jpg");
-				$("#art").attr("src", art +".jpg");
-				$("#flower").attr("src", flower +".jpg");
-				$("#food").attr("src", food +".jpg");
-				$("#girl").attr("src", girl +".jpg");
-				$("#travel").attr("src", travel +".jpg");	
+			var urlParams = new URLSearchParams(window.location.search);
+			var item = urlParams.get('item');
+			var uniqueRandoms = [];
+			var numRandoms = urlParams.get('total');
+
+			function makeUniqueRandom() {
+				if (!uniqueRandoms.length) {
+					for (var i = 0; i < numRandoms; i++) {
+						uniqueRandoms.push(i);
+					}
+				}
+				var index = Math.floor(Math.random() * uniqueRandoms.length);
+				var val = uniqueRandoms[index];
+				uniqueRandoms.splice(index, 1);
+				return val;
 			}
-			randimg();
+
+			function randomimg(item,total)
+			{
+				$("#col3").html("");
+				for (var i = 0; i < 6; i++) {
+					var rand = makeUniqueRandom();
+
+					$("#col3").append("<div><img src='i/"+ item +"/"+ rand + ".jpg' > </div>");
+				}				
+			}
+			if (numRandoms > 0) {
+				randomimg(item,numRandoms);	
+			}
+			
 			$("#layanh").click( function(){
-				randimg();				
-			})
+				randomimg();
+			});
 		});
 	</script>
 	<div class="clear15"></div>
 	<p style="padding: 0.3rem;">Lưu ảnh về máy , kèm copy các câu phía dưới để đăng trên khoảnh khắc của Xiwang</p>
-	<p style="padding: 0.3rem;">Để lấy ảnh mới ấn nút màu xanh phía dưới</p>
+	
+
+	<div id="col1">
+		<h2><a href="moment.html?total=70&item=animal">Ảnh động vật</a></h2>
+		<h2><a href="moment.html?total=35&item=art">Ảnh nghe thuật</a></h2>
+	</div>
 	<div id="content">
+
 		<div id="col3">
-			<div>
-				<img id="animal" src="" alt="">
-				<h2>Ảnh động vật</h2>					
-			</div>
-			<div>
-				<img id="art" src="" alt="">
-				<h2>Ảnh nghệ thuật</h2>	
-			</div>
-			<div>
-				<img id="flower" src="" alt="">
-				<h2>Ảnh hoa</h2>	
-			</div>
-			<div>
-				<img id="food" src="" alt="">
-				<h2>Ảnh đồ ăn</h2>	
-			</div>
-			<div>
-				<img id="girl" src="" alt="">
-				<h2>Ảnh cô gái</h2>	
-			</div>
-			<div>
-				<img id="travel" src="" alt="">
-				<h2>Ảnh phong cảnh</h2>	
-			</div>
-			<div style="background: #289cff; width: 100%; color: #fff;">
+		 
+		
+		</div>
+			<div style="background: #289cff; width: 100%; color: #fff; padding: 10px; text-align: center;">
 				<h2 id="layanh">Lấy ảnh khác</h2>
 			</div>
-		</div>
+
+
 		<h2 class="tit">Các câu đăng khoảnh khắc</h2>
 		
 		<table id="tblList">
