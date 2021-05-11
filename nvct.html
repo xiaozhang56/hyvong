@@ -17,24 +17,19 @@
 		<div id="col3">
 		</div>
 		<h2 id="layanh" style="background: #289cff; width: 100%; color: #fff; padding: 10px; text-align: center;">
-			Lấy nhân vật khác
+			Xem thêm ảnh nhân vật này
 		</h2>
+<br><br>
+		<a href="nhanvat.html"><h2 style="background: #289cff; width: 100%; color: #fff; padding: 10px; text-align: center;">Xem nhân vật khác</h2></a>
 	</div>
 	<script>
 		$(document).ready( function(){
 			
 
-			var obj = [    
-			{id:1, total:87},
-			{id:2, total:69},
-			{id:3, total:78},
-			{id:4, total:61},
-			{id:5, total:108},
-			{id:6, total:45},			
-			{id:8, total:47},
-			{id:9, total:46},       
-			{id:10, total:55},       
-			]
+			var urlParams = new URLSearchParams(window.location.search);
+			var id = urlParams.get('id');			
+			var total = urlParams.get('total');
+
 
 			function getRandom(arr, n) {
 				var result = new Array(n),
@@ -53,15 +48,20 @@
 			function randomimg()
 			{
 				$("#col3").html("");
-				var arr1 = getRandom(obj,6)
-				
+				var arr1 = getRandom(arr,6);
 				for (var i = 0; i < arr1.length; i++) {
-					$("#col3").append("<div><a href='nvct.html?id="+arr1[i].id+"&total="+arr1[i].total+"'><img src='nv/"+ arr1[i].id +"/1.jpg' ></a></div>");
-				}
+					$("#col3").append("<div><img src='nv/"+ id +"/"+ arr1[i] + ".jpg' > </div>");					
+				}		 	
 			}
 
-			randomimg();
-
+			if (total > 0) {
+				var arr = [];
+				for (var i = 1; i < total; i++) {
+					arr.push(i);
+				}
+				randomimg();	
+			}
+			
 			$("#layanh").click( function(){
 				randomimg();
 			});
