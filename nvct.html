@@ -22,7 +22,7 @@
 		<h2 id="layanh" style="background: #289cff; width: 100%; color: #fff; padding: 10px; text-align: center;">
 			Xem thêm ảnh nhân vật này
 		</h2>
-<br><br>
+		<br><br>
 		<a href="nhanvat.html"><h2 style="background: #289cff; width: 100%; color: #fff; padding: 10px; text-align: center;">Xem nhân vật khác</h2></a>
 	</div>
 	<script>
@@ -33,42 +33,47 @@
 			var id = urlParams.get('id');			
 			var total = urlParams.get('total');
 
-
-			function getRandom(arr, n) {
-				var result = new Array(n),
-				len = arr.length,
-				taken = new Array(len);
-				if (n > len)
-					throw new RangeError("getRandom: more elements taken than available");
-				while (n--) {
-					var x = Math.floor(Math.random() * len);
-					result[n] = arr[x in taken ? taken[x] : x];
-					taken[x] = --len in taken ? taken[len] : len;
-				}
-				return result;
+			$("#col3").html("");			
+			for (var i = 1; i < total; i++) {
+				$("#col3").append("<div><img src='nv/"+ id +"/"+ i + ".jpg' ><p> Ảnh "+ i + " </p></div>");					
 			}
 
-			function randomimg()
-			{
-				$("#col3").html("");
-				var arr1 = getRandom(arr,10);
-				for (var i = 0; i < arr1.length; i++) {
-					$("#col3").append("<div><img src='nv/"+ id +"/"+ arr1[i] + ".jpg' ><p> Ảnh "+ arr1[i] + " </p></div>");					
-				}		 	
-			}
 
-			if (total > 0) {
-				$("#notice").html("<h1>Nhân vật số "+id+"</h1>");
-				var arr = [];
-				for (var i = 1; i < total; i++) {
-					arr.push(i);
-				}
-				randomimg();	
-			}
+			// function getRandom(arr, n) {
+			// 	var result = new Array(n),
+			// 	len = arr.length,
+			// 	taken = new Array(len);
+			// 	if (n > len)
+			// 		throw new RangeError("getRandom: more elements taken than available");
+			// 	while (n--) {
+			// 		var x = Math.floor(Math.random() * len);
+			// 		result[n] = arr[x in taken ? taken[x] : x];
+			// 		taken[x] = --len in taken ? taken[len] : len;
+			// 	}
+			// 	return result;
+			// }
+
+			// function randomimg()
+			// {
+			// 	$("#col3").html("");
+			// 	var arr1 = getRandom(arr,10);
+			// 	for (var i = 0; i < arr1.length; i++) {
+			// 		$("#col3").append("<div><img src='nv/"+ id +"/"+ arr1[i] + ".jpg' ><p> Ảnh "+ arr1[i] + " </p></div>");					
+			// 	}
+			// }
+
+			// if (total > 0) {
+			// 	$("#notice").html("<h1>Nhân vật số "+id+"</h1>");
+			// 	var arr = [];
+			// 	for (var i = 1; i < total; i++) {
+			// 		arr.push(i);
+			// 	}
+			// 	randomimg();	
+			// }
 			
-			$("#layanh").click( function(){
-				randomimg();
-			});
+			// $("#layanh").click( function(){
+			// 	randomimg();
+			// });
 
 		});
 	</script>
