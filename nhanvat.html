@@ -12,62 +12,103 @@
 <body class="w640">
 	<script type="text/javascript" src="j/j.js"></script>		
 	<script type="text/javascript" src="j/menuhead.js"></script>
-	<div id="content">
-		<p style="padding: 0.3rem;">Chọn nhân vật phù hợp.Hãy nhớ mã số của nhân vật để tra cứu dễ dàng. Ấn nút lấy nhân vật khác nếu cảm thấy không phù hợp</p>
-		<div id="col3">
-		</div>
-		<h2 id="layanh" style="background: #289cff; width: 100%; color: #fff; padding: 10px; text-align: center;">
-			Lấy nhân vật khác
-		</h2>
-	</div>
-	<script>
-		$(document).ready( function(){
-			
+	<style>
+		#notice{ padding: 0.5rem  0; }
+		#searchms input[type="number"]{     display: inline-block;
+			padding: 2%;
+			border: 1px solid #ccc;
+			width: 60%;	font-size: 0.5rem; }
+			#searchms span{ display: inline-block;
+				padding: 2%;
+				text-align: center;
+				width: 28%;
+				background: #ccc; }
+			</style>
+			<div id="content">
 
-			var obj = [    
-			{id:1, total:87},
-			{id:2, total:69},
-			{id:3, total:78},
-			{id:4, total:61},
-			{id:5, total:108},
-			{id:6, total:45},			
-			{id:8, total:47},
-			{id:9, total:46},       
-			{id:10, total:55},       
-			]
+				<div id="notice"></div>
 
-			function getRandom(arr, n) {
-				var result = new Array(n),
-				len = arr.length,
-				taken = new Array(len);
-				if (n > len)
-					throw new RangeError("getRandom: more elements taken than available");
-				while (n--) {
-					var x = Math.floor(Math.random() * len);
-					result[n] = arr[x in taken ? taken[x] : x];
-					taken[x] = --len in taken ? taken[len] : len;
-				}
-				return result;
-			}
+				<div id="searchms">
+					<input type="number" placeholder="Mã số nhân vật">
+					<span>Tìm kiếm</span>
+				</div>
 
-			function randomimg()
-			{
-				$("#col3").html("");
-				var arr1 = getRandom(obj,6)
-				
-				for (var i = 0; i < arr1.length; i++) {
-					$("#col3").append("<div><a href='nvct.html?id="+arr1[i].id+"&total="+arr1[i].total+"'><img src='nv/"+ arr1[i].id +"/1.jpg' ></a></div>");
-				}
-			}
+				<div id="col3">
+				</div>
+				<h2 id="layanh" style="background: #289cff; width: 100%; color: #fff; padding: 10px; text-align: center;">
+					Lấy nhân vật khác
+				</h2>
+			</div>
+			<script>
+				$(document).ready( function(){
 
-			randomimg();
 
-			$("#layanh").click( function(){
-				randomimg();
-			});
+					var obj = [    
+					{id:"1", total:"87"},
+					{id:"2", total:"69"},
+					{id:"3", total:"78"},
+					{id:"4", total:"61"},
+					{id:"5", total:"108"},
+					{id:"6", total:"45"},			
+					{id:"8", total:"47"},
+					{id:"9", total:"46"},       
+					{id:"10", total:"55"},       
+					]
 
-		});
-	</script>
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-</body>
-</html>
+
+					function getRandom(arr, n) {
+						var result = new Array(n),
+						len = arr.length,
+						taken = new Array(len);
+						if (n > len)
+							throw new RangeError("getRandom: more elements taken than available");
+						while (n--) {
+							var x = Math.floor(Math.random() * len);
+							result[n] = arr[x in taken ? taken[x] : x];
+							taken[x] = --len in taken ? taken[len] : len;
+						}
+						return result;
+					}
+
+					function randomimg()
+					{
+						$("#notice").html("<b>Đang có khoảng " + obj.length + " nhân vật.<br> Hãy nhớ mã số của nhân vật để tra cứu dễ dàng. <br> Ấn nút lấy nhân vật khác nếu cảm thấy không phù hợp</b>")
+						$("#col3").html("");
+						var arr1 = getRandom(obj,6)
+
+						for (var i = 0; i < arr1.length; i++) {
+							$("#col3").append("<div><a href='nvct.html?id="+arr1[i].id+"&total="+arr1[i].total+"'><img src='nv/"+ arr1[i].id +"/1.jpg' ></a><p>Nhân vật số "+arr1[i].id+"</p></div>");
+
+
+						}
+					}
+
+					randomimg();
+
+					$("#layanh").click( function(){
+						randomimg();
+					});
+
+					$("#searchms span").click( function(){
+						var ms = $("#searchms input").val();
+						if (ms != "") {
+							var obj2 = obj.filter(function(obj1) {
+								return (obj1.id === ms);
+							});
+							//console.log(obj2[0]);
+							
+							if (typeof obj2[0] !== "undefined") {
+								$("#col3").html("<div><a href='nvct.html?id="+obj2[0].id+"&total="+obj2[0].total+"'><img src='nv/"+ obj2[0].id +"/1.jpg' ></a><p>Nhân vật số "+obj2[0].id+"</p></div>");
+							}
+							else{
+								alert("Không tìm thấy!");
+							}
+						}
+
+					});
+
+				});
+			</script>
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		</body>
+		</html>

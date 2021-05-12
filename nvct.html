@@ -13,7 +13,10 @@
 	<script type="text/javascript" src="j/j.js"></script>		
 	<script type="text/javascript" src="j/menuhead.js"></script>
 	<div id="content">
-		<p style="padding: 0.3rem;">Chọn nhân vật phù hợp.Hãy nhớ mã số của nhân vật để tra cứu dễ dàng. Ấn nút lấy nhân vật khác nếu cảm thấy không phù hợp</p>
+		<p style="padding: 0.3rem;">Nếu thấy không phù hợp hãy ấn nút xem nhân vật khác ở phía dưới để quay lại.Thứ tự ảnh được sắp xếp ngẫu nhiên</p>
+		
+		<div style="text-align: center; font-size: 1rem;" id="notice"></div>
+
 		<div id="col3">
 		</div>
 		<h2 id="layanh" style="background: #289cff; width: 100%; color: #fff; padding: 10px; text-align: center;">
@@ -48,13 +51,14 @@
 			function randomimg()
 			{
 				$("#col3").html("");
-				var arr1 = getRandom(arr,6);
+				var arr1 = getRandom(arr,10);
 				for (var i = 0; i < arr1.length; i++) {
-					$("#col3").append("<div><img src='nv/"+ id +"/"+ arr1[i] + ".jpg' > </div>");					
+					$("#col3").append("<div><img src='nv/"+ id +"/"+ arr1[i] + ".jpg' ><p> Ảnh "+ arr1[i] + " </p></div>");					
 				}		 	
 			}
 
 			if (total > 0) {
+				$("#notice").html("<h1>Nhân vật số "+id+"</h1>");
 				var arr = [];
 				for (var i = 1; i < total; i++) {
 					arr.push(i);
