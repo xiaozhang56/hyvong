@@ -4,7 +4,7 @@
 </style>
 <form action="" method="POST">
 	<input type="text" placeholder="Path" name="path">
-	<input type="number" placeholder="STT" name="stt">
+	<input type="number" placeholder="STT" name="stt" value="1">
 	<input type="submit" value="Submit" name="submit">
 </form>
 
