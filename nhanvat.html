@@ -35,9 +35,9 @@
 
 				<div id="col3">
 				</div>
-				<h2 id="layanh" style="background: #289cff; width: 100%; color: #fff; padding: 10px; text-align: center;">
+			<!-- 	<h2 id="layanh" style="background: #289cff; width: 100%; color: #fff; padding: 10px; text-align: center;">
 					Lấy nhân vật khác
-				</h2>
+				</h2> -->
 			</div>
 			<script>
 				$(document).ready( function(){
@@ -85,10 +85,11 @@
 					{
 						$("#notice").html("<b>Đang có khoảng " + obj.length + " nhân vật.<br> Hãy nhớ mã số của nhân vật để tra cứu dễ dàng. <br> Ấn nút lấy nhân vật khác nếu cảm thấy không phù hợp</b>")
 						$("#col3").html("");
-						var arr1 = getRandom(obj,6)
+						//var arr1 = getRandom(obj,6)
 
-						for (var i = 0; i < arr1.length; i++) {
-							$("#col3").append("<div><a href='nvct.html?id="+arr1[i].id+"&total="+arr1[i].total+"'><img src='nv/"+ arr1[i].id +"/1.jpg' ></a><p>Nhân vật số "+arr1[i].id+"</p></div>");
+						//for (var i = 0; i < arr1.length; i++) {
+						for (var i = 0; i < obj.length; i++) {
+							$("#col3").append("<div><a href='nvct.html?id="+obj[i].id+"&total="+obj[i].total+"'><img src='nv/"+ obj[i].id +"/1.jpg' ></a><p>Nhân vật số "+obj[i].id+"</p></div>");
 
 
 						}
