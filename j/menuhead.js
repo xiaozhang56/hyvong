@@ -41,6 +41,7 @@ var myvar = '<div id="head">'+
 '   <a href="nhanvat.html">Nhân vật</a>      '+
 '		<a href="groupname.html">Đặt tên nhóm</a>			'+
 '		<a href="group.html">Các câu quản lý nhóm</a>'+
+'   <a href="moinhom.html">Mời vào nhóm</a>'+
 '	</div>';
 	
 

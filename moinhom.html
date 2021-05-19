@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Giao tiếp 1</title>
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="c/c.css">
+</head>
+<body class="w640">
+	<script type="text/javascript" src="j/j.js"></script>
+	<script type="text/javascript" src="j/menuhead.js"></script>
+	<script type="text/javascript" src="j/menu.js"></script>
+	<script>
+		$(document).ready( function(){
+
+			$(".tit2").each( function(){
+				var txt = $(this).text();
+				var id = $(this).attr("id");
+				$("#chude").append(new Option(txt, id));
+			})
+
+			$(document).on("change", "#chude" , function() {
+				var id = $(this).val();
+				$('html, body').animate({scrollTop:$('#'+id).position().top - 100}, 'slow');
+			});
+
+			$(window).bind('scroll', function () {
+				if ($(window).scrollTop() > 150) {
+					$('#chude').addClass('fixed');
+				} else {
+					$('#chude').removeClass('fixed');
+				}
+			});
+
+		})
+	</script>
+	<style>
+		td.tit2+td{ display: none; }
+		#chude{ display: block; padding: 10px; font-size: 0.8rem; width: 98%; margin: 0 0 0.5rem 0;  }
+		#chude option{ font-size: 0.8rem; }
+		#chude.fixed{ top:0; left: 0; z-index: 99; position: fixed; }
+	</style>
+	<div id="content">
+
+<br><br><br>
+		<select id="chude">
+			<option value="">Chọn chủ đề</option>
+		</select>
+
+		<table id="tblList">
+			<tbody>
+				<tr>
+					<td id="p1" class="tit2" colspan="3">Gửi lời mời kết bạn</td>
+				</tr>
+				<tr>
+					<td>🤗🤗🤗🌹🌹🤝🤝 </td>
+					<td>mặt cười , bắt tay , bông hoa </td>
+				</tr>
+				<tr>
+					<td>微信是海，网友是海浪，喜悦生活因为有你，跟我交朋友喔</td>
+					<td>Xiwang là biển, bạn bè là sóng. Biển đẹp vì sóng biển, cuộc sống ngọt ngào vì có bạn, kết bạn với tôi nhé!
+					</td>
+
+				</tr>
+				<tr>
+					<td>树需要叶子，海需要鱼，我需要有你当朋友，成为我的网友喔</td>
+					<td>🍃🍃Cây cần lá, biển cần cá, tôi cần bạn. Kết bạn với tôi!👭👭
+					</td>
+					
+				</tr>
+				<tr>
+					<td>遇到互惠，一起互动吧禄带来，跟我成为朋友喔　</td>
+					<td>tôi là ... gặp bạn là nghĩa tương giao, cùng nhau tương tác, cùng đưa lộc về, chúng ta kết bạn nhé!</td>
+					
+				</tr>
+				<tr>
+					<td>你好！我是慧琳 ！很高兴成为好友！</td>
+					<td>xin chào！ tôi là Tuệ Lâm！, rất vui được kết bạn!</td>					
+				</tr>
+				<tr>
+					<td id="p2" class="tit2" colspan="3">Gửi mã QR mời vào nhóm</td>
+				</tr>
+
+				<tr>
+					<td>你好我是 XXX</td>
+					<td>Xin chào tôi là XXX (thay XXX bằng tên của bạn)</td>
+				</tr>
+				<tr>
+					<td>我的兴趣是做菜和种菜</td>
+					<td>Sở thích nấu ăn và trồng rau xanh.</td>
+				</tr>
+				<tr>
+					<td>你记得用干净的青菜。 照顾家里每餐喔</td>
+					<td>Bạn nhớ chăm sóc bữa cơm gia đình, bằng rau sạch nhé!</td>
+				</tr>
+				<tr>
+					<td>（哇！ 很美，是你自己种的吗？）</td>
+					<td>Họ sẽ tương tác lại ( ồ cảm ơn, chúng rất đẹp, bạn tự trồng chúng đó sao....)</td>
+				</tr>
+				<tr>
+					<td>青菜对身体很好</td>
+					<td>Mình tương tác lại: （rau sạch rất tốt cho sức khỏe ）( gửi ảnh )</td>
+				</tr>
+				<tr>
+					<td>你有时间多种青菜喔很有趣</td>
+					<td>bạn có thời gian hãy tự trồng những nuống rau sạch nhé, rất thú vị.</td>
+				</tr>
+				<tr>
+					<td>你要参加我们群组吗？ 这组很多有益信息</td>
+					<td>Bạn có muốn tham gia nhóm cùng tôi không? ( gửi luôn mã Qr) Nhóm rất nhiều thông tin hữu ích.( gửi)</td>
+				</tr>
+
+				<tr>
+					<td id="p3" class="tit2" colspan="3">Tình huống 1</td>
+				</tr>
+
+				<tr>
+					<td colspan="2"><b>TH1: Họ hỏi đây là nhóm gì ? </b></td>
+				</tr>
+				<tr>
+					<td>你进去看啊免费的</td>
+					<td >bạn cứ vào xem không mất gì cả</td>
+				</tr>
+				<tr>
+					<td>不进去也没关系啦</td>
+					<td >không vào cũng không sao</td>
+				</tr>
+
+				<tr>
+					<td colspan="2"><b>TH2: Họ đã vào, hoặc họ không nói gì vẫn vào. </b></td>
+				</tr>
+
+				<tr>
+					<td>我不进。</td>
+					<td >TH3: Tôi không vào</td>
+				</tr>
+				<tr>
+					<td>不进入也没关系，我们还是好朋友喔</td>
+					<td >Không vào cũng không sao, chúng ta là bạn tốt nhé!</td>
+				</tr>
+				<tr>
+					<td>你有群组吗？ 可以让我参加吗？ 谢谢你</td>
+					<td >Bạn có nhóm cho thì mời tôi tham gia nhé! 🤝🤝🤝cảm ơn bạn</td>
+				</tr>
+
+				<tr>
+					
+					<td colspan="2">tương tác gửi bó hoa cho họ</td>
+				</tr>
+				<tr>
+					<td>黄玫瑰！ 黄色是明亮的颜色，表示快乐，温暖，表象真诚的好友。
+					我希望我们可以是好朋友！</td>
+					<td >Hoa hồng vàng! màu vàng thể hiện sự tươi sáng, hạnh phúc, ấm áp, là loài hoa biểu tượng cho tình bạn chân thành, không vụ lợi. Tôi mong rằng chúng ta là những người bạn tốt!</td>
+				</tr>
+
+				<tr>
+					<td id="p4" class="tit2" colspan="3">Tình huống 2</td>
+				</tr>
+
+				<tr>
+					<td>我是 XXX
+					我是中国人我在海外</td>
+					<td>Tôi là XXX, Tôi là người trung quốc sống tại hải ngoại. (thay XXX bằng tên của mình)</td>
+				</tr>
+				<tr>
+					<td>Bạn có nhóm tin tức nào hay ko? Kéo tôi vào nhé
+					你有那一组有好信息吗？ 拉我喔</td>
+					<td>Bạn có nhóm tin tức nào hay ko? Kéo tôi vào nhé
+
+					</td>
+				</tr>
+				<tr>
+					<td>我送你这组都是对你有益信息喔</td>
+					<td>Tôi tặng bạn nhóm tin tức hữu ích,</td>
+				</tr>
+				<tr>
+					<td colspan="2">Gửi mã Qr, hôm sau kt thấy họ có vào hay ko? Vào rồi thì thôi, chưa vào thì hỏi có vào được không </td>	
+				</tr>
+
+
+				<tr>
+					<td>你可以进入吗？</td>
+					<td>có vào đc ko ?</td>
+				</tr>
+
+				<tr>
+					<td id="p5" class="tit2" colspan="3">Tương tác 1</td>
+				</tr>
+
+				<tr>
+					<td >🤝🤝 谢谢你很高兴成为新好友！🍃🍃🍃</td>
+					<td >B1: 🤗🤗xin chào! Cảm ơn bạn đã chấp nhận yêu cầu kb của tôi, 🤝🤝
+					tôi rất vui khi ban trở thành người bạn mới của tôi🍃🍃🍃</td>
+				</tr>
+				<tr>
+					<td >瘟疫在威胁我们的生活</td>
+					<td >Cuộc sống chúng ta đang bị đe dọa bởi bệnh dịch.</td>
+				</tr>
+				<tr>
+					<td >希望你跟家庭平安幸福</td>
+					<td >Mong bạn và gia đình bạn luôn hạnh phúc và bình an 🍁🍁</td>
+				</tr>
+				<tr>
+					<td >我是 XXX 我在海外</td>
+					<td >Tôi là XXX sống tại hải ngoại . (Thay XXX bằng tên của mình)</td>
+				</tr>
+				<tr>
+					<td >瘟疫回升我没办法回中国</td>
+					<td >Bệnh dịch đang bùng phát tôi chưa thể trở về trung quốc.</td>
+				</tr>
+				<tr>
+
+					<td colspan="2">
+						Họ hỏi: tôi có thể giúp gì ko? 我能帮你什么吗？
+					Trả lời: Tôi ổn, tôi muốn gửi bạn nhóm thông tin hữu ích . ( gửi mã Qr) vào xem bạn nhớ không đăng quảng cáo, không gửi ảnh, video nhé.</td>
+				</tr>
+				<tr>
+					<td >我想加你入群优质的分组</td>
+					<td >tôi muốn gửi bạn nhóm thông tin hữu ích .</td>
+				</tr>
+				<tr>
+					<td >
+					你记得不发广告，不发信息，影片</td>
+					<td >bạn nhớ không đăng quảng cáo, không gửi ảnh, video nhé.</td>
+				</tr>
+
+				<tr>
+					<td id="p6" class="tit2" colspan="3">Tương tác 2</td>
+				</tr>
+
+				<tr>
+					<td  >早 上 如果你感觉累 ,想睡，还是不舒服，
+					你看着信息你一定会感觉中满能量，爱生活，祝你每一天都快乐</td>
+					<td >vào buổi sáng, bạn sẽ cảm thấy mệt mỏi, buồn ngủ và khó chịu. Nhưng chắc chắn, sau khi đọc thông điệp của tôi,
+					bạn sẽ cảm thấy tràn đầy năng lượng và yêu cuộc sống. CHÚC BẠN MỘT NGÀY TỐT LÀNH, 🤗🤗🍁🍁🍃</td>
+				</tr>
+				<tr>
+					<td >你想参加我们的组吗？</td>
+					<td >bạn có muốn tham gia nhóm cùng tôi không?</td>
+				</tr>
+				<tr>
+					<td colspan="2">gửi mã Qr hoặc kéo vào nhóm.</td>
+				</tr>
+				<tr>
+					<td colspan="2"><b>Tình huống tương tự</b></td>
+				</tr>
+				<tr>
+					<td>谢谢你很高兴成为新好友！🤝🤝 </td>
+					<td>Xin chào! Cảm ơn bạn đã chấp nhận yêu cầu kb của tôi, 🤝🤝 tôi rất vui khi ban trở thành người bạn mới của tôi🍃</td>
+				</tr>
+				<tr>
+					<td>🤗🤗🤗🤝🤝🍃🍃👭👭</td>
+					<td >Gửi mấy cái Sticker 🤗🤗🤗🤝🤝🍃🍃👭👭</td>
+				</tr>
+				<tr>
+					<td>我想加你入群优质的分组可以吗？</td>
+					<td>bạn có muốn tham gia nhóm cùng tôi không?</td>
+				</tr>
+				<tr>
+					<td colspan="2">gửi mã Qr hoặc kéo vào nhóm.</td>
+				</tr>
+
+	<tr>
+					<td id="p7" class="tit2" colspan="3">Tương tác 3</td>
+				</tr>
+
+				<tr>
+<td >🤗🤗 谢谢你接受 当网友！ 🤝🤝</td>
+<td>xin chào! Cảm ơn bạn đã chấp nhận yêu cầu kb của tôi,</td>
+</tr>
+<tr>
+<td >谢谢你很高兴成为新好友！🍃🍃🍃</td>
+<td>tôi rất vui khi ban trở thành người bạn mới của tôi</td>
+</tr>
+<tr>
+<td>🤗🤗🤗🤝</td>
+<td>Gửi mấy cái mặt cười</td>
+</tr>
+<tr>
+<td>请微笑每次看见我</td>
+<td>Bạn hãy mỉm cười khi nhìn thấy tôi!( gửi)</td>
+</tr>
+<tr>
+<td >每次看到你我会很开心</td>
+<td>Tôi sẽ cười thật tưoi khi nhìn thấy bạn!</td>
+</tr>
+<tr>
+<td>参加我的组哦</td>
+<td>Bạn tham gia nhóm cùng tôi nhé. <br>
+Gửi mã Qr hoặc kéo họ vào nhóm</td>
+</tr>
+<tr>
+<td>你加我们入群优质的分组哦</td>
+<td>
+Nhóm có nhiều thông tin hữu ích. Bạn có nhóm hay thì cho tôi tham gia nhóm nhé!</td>
+</tr>
+
+<tr>
+					<td id="p8" class="tit2" colspan="3">Tương tác 4</td>
+				</tr>
+
+<tr>
+<td>🤗🤗 谢谢你成为朋友 🤝🤝 很高兴成为新好友</td>
+<td>
+xin chào! Cảm ơn bạn đã chấp nhận yêu cầu kb của tôi, 
+tôi rất vui khi ban trở thành người bạn mới của tôi</td>
+</tr>
+<tr>
+<td >你好我是 XXX、我的兴趣是做菜和种菜</td>
+<td>Tôi là XXX (thay XXX bằng tên của mình) <br>	
+Sở thích nấu ăn và chăm sóc cây xanh<br>
+(Khoe bạn một chút thành quả!) gửi ảnh</td>
+</tr>
+<tr>
+<td >夏天了天气很热你要保重哦</td>
+<td>Bạn hãy giữ gìn sức khỏe nhé trong mùa hè nóng nực này nhé!</td>
+</tr>
+<tr>
+<td >多吃青菜对身体好的</td>
+<td>Thêm rau tươi rất tốt cho sk.</td>
+</tr>
+<tr>
+<td >我希望你们家庭幸福美满</td>
+<td>Tôi hy vọng bạn luôn có 1 gia đình ấm áp.</td>
+</tr>
+<tr>
+<td>你知道吗：瘟疫随时会夺走我们的生命</td>
+<td>Bạn ơi! Bệnh dịch có thể cướp đi sinh mệnh của chúng ta!</td>
+</tr>
+<tr>
+<td >你加我们入群优质的分组哦这组分享很多优质的</td>
+<td>Xin vui lòng tham gia nhóm với tôi và chia sẻ rất nhiều thông tin hữu ích.</td>
+</tr>
+<tr>
+<td colspan="2">Gửi mã Qr hoặc kéo họ vào nhóm</td>
+</tr>
+<tr>
+<td >只对你好</td>
+<td>Không có thiệt hại là tốt cho bạn!</td>
+</tr>
+
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
