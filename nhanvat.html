@@ -67,6 +67,18 @@
 					{id:"38", total:"36"},
 					{id:"39", total:"52"},
 					{id:"40", total:"126"},
+
+					{id:"26", total:"91"},
+					{id:"27", total:"90"},
+					{id:"28", total:"58"},
+					{id:"44", total:"60"},
+					{id:"56", total:"81"},
+					{id:"70", total:"52"},
+					{id:"71", total:"65"},
+					{id:"74", total:"71"},
+					{id:"75", total:"168"},
+					{id:"78", total:"198"},
+					{id:"79", total:"51"},
 					]
 
 
@@ -91,25 +103,25 @@
 						//var arr1 = getRandom(obj,6)
 
 						//for (var i = 0; i < arr1.length; i++) {
-						for (var i = 0; i < obj.length; i++) {
-							$("#col3").append("<div><a href='nvct.html?id="+obj[i].id+"&total="+obj[i].total+"'><img src='nv/"+ obj[i].id +"/1.jpg' ></a><p>Nhân vật số "+obj[i].id+"</p></div>");
+							for (var i = 0; i < obj.length; i++) {
+								$("#col3").append("<div><a href='nvct.html?id="+obj[i].id+"&total="+obj[i].total+"'><img src='nv/"+ obj[i].id +"/1.jpg' ></a><p>Nhân vật số "+obj[i].id+"</p></div>");
 
 
+							}
 						}
-					}
 
-					randomimg();
-
-					$("#layanh").click( function(){
 						randomimg();
-					});
 
-					$("#searchms span").click( function(){
-						var ms = $("#searchms input").val();
-						if (ms != "") {
-							var obj2 = obj.filter(function(obj1) {
-								return (obj1.id === ms);
-							});
+						$("#layanh").click( function(){
+							randomimg();
+						});
+
+						$("#searchms span").click( function(){
+							var ms = $("#searchms input").val();
+							if (ms != "") {
+								var obj2 = obj.filter(function(obj1) {
+									return (obj1.id === ms);
+								});
 							//console.log(obj2[0]);
 							
 							if (typeof obj2[0] !== "undefined") {
@@ -122,8 +134,8 @@
 
 					});
 
-				});
-			</script>
-			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-		</body>
-		</html>
+					});
+				</script>
+				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			</body>
+			</html>
