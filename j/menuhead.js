@@ -35,10 +35,11 @@ var myvar = '<div id="head">'+
 '<div id="col2">'+
 '		<a href="app.html">Tải ứng dụng</a>'+
 '		<a href="ten.html">Đặt tên nick</a>'+
-'		<a href="giaotiep.html">Các câu giao tiếp</a>'+
-'		<a href="giaotiep2.html">Các câu giao tiếp 2</a>'+
-'		<a href="moment.html">Đăng khoảnh khắc</a>			'+
+'		<a href="giaotiepnt.html">Giao tiếp nhắn tin</a>'+
+'		<a href="giaotiepkg.html">Giao tiếp khẩu giảng</a>'+
+'   <a href="nghenghiep.html">Nghề nghiệp</a>      '+
 '   <a href="nhanvat.html">Nhân vật</a>      '+
+'   <a href="moment.html">Đăng khoảnh khắc</a>      '+
 '		<a href="groupname.html">Đặt tên nhóm</a>			'+
 '		<a href="group.html">Các câu quản lý nhóm</a>'+
 '   <a href="moinhom.html">Mời vào nhóm</a>'+

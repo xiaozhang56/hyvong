@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Giao tiếp 2</title>
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="c/c.css">
+</head>
+<body class="w640">
+	<script type="text/javascript" src="j/j.js"></script>
+	<script type="text/javascript" src="j/menuhead.js"></script>
+	<script type="text/javascript" src="j/menu.js"></script>
+	<script>
+		$(document).ready( function(){
+
+			$(".tit2").each( function(){
+				var txt = $(this).text();
+				var id = $(this).attr("id");
+				$("#chude").append(new Option(txt, id));
+			})
+
+			$(document).on("change", "#chude" , function() {
+				var id = $(this).val();
+				$('html, body').animate({scrollTop:$('#'+id).position().top - 100}, 'slow');
+			});
+
+			$(window).bind('scroll', function () {
+				if ($(window).scrollTop() > 150) {
+					$('#chude').addClass('fixed');
+				} else {
+					$('#chude').removeClass('fixed');
+				}
+			});
+
+		})
+	</script>
+	<style>
+		td.tit2+td{ display: none; }
+		#chude{ display: block; padding: 10px; font-size: 0.8rem; width: 98%; margin: 0 0 0.5rem 0;  }
+		#chude option{ font-size: 0.8rem; }
+		#chude.fixed{ top:0; left: 0; z-index: 99; position: fixed; }
+	</style>
+	<div id="content">
+		<p style="padding: 0.3rem;">Lưu ý: trên Xiwang nên sử dụng các sticker và các emotion để cho cuộc trò chuyện thêm sinh động.</p>
+		<p style="padding: 0.3rem;">Khi đã chọn được câu cần dùng, click đúp (trên PC) hoặc chạm 2 lần (trên ĐT) vào câu đó, nếu chuyển màu xanh lam là đã copy thành công.</p>
+		<h2 class="tit">Tình huống hay gặp</h2>
+
+		<select id="chude">
+			<option value="">Chọn chủ đề</option>
+		</select>
+
+		<table id="tblList">
+			<tbody>
+				
+<tr>
+<td>我是家庭妇女，我喜欢厨艺。</td>
+<td>Tôi là nội trợ, tôi thích nấu ăn.</td>
+</tr>
+<tr>
+<td>我是一个工程师</td>
+<td>Tôi là một kỹ sư.</td>
+</tr>
+<tr>
+<td>我是老师</td>
+<td>Tôi là giáo viên.</td>
+</tr>
+<tr>
+<td>我是厨师</td>
+<td>Tôi là một đầu bếp.</td>
+</tr>
+<tr>
+<td>我是一 个研究生</td>
+<td>Tôi là nhà nghiên cứu.</td>
+</tr>
+<tr>
+<td>我是一个销售，但是我喜欢传统文化</td>
+<td>Tôi là một nhà kinh doanh nhưng thích văn hóa truyền thống.</td>
+</tr>
+<tr>
+<td>我是会计</td>
+<td>Tôi là một kế toán.</td>
+</tr>
+<tr>
+<td>我是画家</td>
+<td>Tôi là một họa sỹ.</td>
+</tr>
+<tr>
+<td>我是设计师</td>
+<td>Tôi là nhà thiết kế.</td>
+</tr>
+<tr>
+<td>我是作家</td>
+<td>Tôi là nhà văn ( tác giả)</td>
+</tr>
+<tr>
+<td>我是生意人</td>
+<td>Tôi là chủ nhà hàng.</td>
+</tr>
+<tr>
+<td>我是一 个医生</td>
+<td>Tôi là một bác sỹ.</td>
+</tr>
+<tr>
+<td>我是一个服务员</td>
+<td>Tôi là nhân viên dịch vụ</td>
+</tr>
+<tr>
+<td>我是一个机关单位的员工</td>
+<td>Tôi là nhân viên công sở</td>
+</tr>
+<tr>
+<td>我是一个园艺工人</td>
+<td>Tôi làm vườn</td>
+</tr>
+<tr>
+<td>我是发型师</td>
+<td>Tôi là thợ làm đầu.</td>
+</tr>
+<tr>
+<td>我是摄影师</td>
+<td>Tôi làm nhiếp ảnh gia.</td>
+</tr>
+<tr>
+<td>我是一 个药剂师，但是我喜欢美食</td>
+<td>Tôi có bằng dược sỹ nhưng tôi thích nấu ăn.</td>
+</tr>
+
+
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

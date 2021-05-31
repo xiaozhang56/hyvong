@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Giao tiếp 2</title>
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="c/c.css">
+</head>
+<body class="w640">
+	<script type="text/javascript" src="j/j.js"></script>
+	<script type="text/javascript" src="j/menuhead.js"></script>
+	<script type="text/javascript" src="j/menu.js"></script>
+	<script>
+		$(document).ready( function(){
+
+			$(".tit2").each( function(){
+				var txt = $(this).text();
+				var id = $(this).attr("id");
+				$("#chude").append(new Option(txt, id));
+			})
+
+			$(document).on("change", "#chude" , function() {
+				var id = $(this).val();
+				$('html, body').animate({scrollTop:$('#'+id).position().top - 100}, 'slow');
+			});
+
+			$(window).bind('scroll', function () {
+				if ($(window).scrollTop() > 150) {
+					$('#chude').addClass('fixed');
+				} else {
+					$('#chude').removeClass('fixed');
+				}
+			});
+
+		})
+	</script>
+	<style>
+		td.tit2+td{ display: none; }
+		#chude{ display: block; padding: 10px; font-size: 0.8rem; width: 98%; margin: 0 0 0.5rem 0;  }
+		#chude option{ font-size: 0.8rem; }
+		#chude.fixed{ top:0; left: 0; z-index: 99; position: fixed; }
+	</style>
+	<div id="content">
+		<p style="padding: 0.3rem;">Lưu ý: trên Xiwang nên sử dụng các sticker và các emotion để cho cuộc trò chuyện thêm sinh động.</p>
+		<p style="padding: 0.3rem;">Khi đã chọn được câu cần dùng, click đúp (trên PC) hoặc chạm 2 lần (trên ĐT) vào câu đó, nếu chuyển màu xanh lam là đã copy thành công.</p>
+		<h2 class="tit">Tình huống hay gặp</h2>
+
+		<select id="chude">
+			<option value="">Chọn chủ đề</option>
+		</select>
+
+		<table id="tblList">
+			<tbody>
+				
+
+				<tr><td id="p1" class="tit2" colspan="3">LỜI CHÀO, LỜI CHÚC.</td></tr> 
+ 
+
+<tr>
+<td>嗨，早！</td>
+<td>Xin chào, chào buổi sáng!</td>
+</tr>
+<tr>
+<td>晚上好！</td>
+<td>Chào buổi tối!</td>
+</tr>
+<tr>
+<td>下午好！</td>
+<td>Chào buổi chiều!</td>
+</tr>
+<tr>
+<td>早上好！</td>
+<td>Chào buổi sáng!</td>
+</tr>
+<tr>
+<td>早 上 快 乐</td>
+<td>Buổi sáng vui vẻ!</td>
+</tr>
+<tr>
+<td>祝 你 早 上 好</td>
+<td>Chúc bạn buổi sáng tốt lành!</td>
+</tr>
+<tr>
+<td>美好的一天！</td>
+<td>Chúc một ngày tốt lành!</td>
+</tr>
+<tr>
+<td>早上好！ 合家平安！</td>
+<td>Chào buổi sáng! Cả nhà bình an!</td>
+</tr>
+<tr>
+<td>每一天 都 是 新 的 机 会。早 上 好</td>
+<td>Mỗi ngày mới đều là một cơ hội mới. Chào buổi sáng!</td>
+</tr>
+<tr>
+<td>早上好！祝你有个幸运的一天！</td>
+<td>Buổi sáng tốt lành, chúc bạn có một ngày may mắn.</td>
+</tr>
+<tr>
+<td>早上好！ 祝一切顺利！</td>
+<td>Chào buổi sáng! Chúc mọi việc thuận lợi!</td>
+</tr>
+<tr>
+<td>祝你有美好的一天！</td>
+<td>Chúc bạn ngày mới tốt lành!</td>
+</tr>
+<tr>
+<td>一天的开始送上我的祝福</td>
+<td>Một ngày mới bắt đầu tặng đến tôi lời chúc phúc.</td>
+</tr>
+<tr>
+<td>祝你快乐，幸福，健康</td>
+<td>Chúc bạn vui vẻ, hạnh phúc, mạnh khỏe!</td>
+</tr>
+<tr>
+<td>愿您天天开心如意。</td>
+<td>Chúc bạn ngày nào cũng vui vẻ như ý muốn!</td>
+</tr>
+<tr>
+<td>愿一个问候带给你一个新的心情，愿一个祝福带给你一个新的起点。</td>
+<td>Mong lời hỏi thăm mang đến cho bạn tâm tình mới, mong một lời chúc mang đến cho bạn khởi đầu mới.</td>
+</tr>
+<tr>
+<td>梦想在向你奔跑，幸福在向你靠拢。早安。</td>
+<td>Ước mơ đang chạy đến bên bạn, hạnh phúc đang kề bên bạn, chào buổi sáng!</td>
+</tr>
+<tr>
+<td>愿我的祝福带给你一天的好心情</td>
+<td>Mong lời chúc phúc của tôi mang đến cho bạn một tâm tình tốt.</td>
+</tr>
+<tr>
+<td>早 上 如果你感觉累 ,想睡，还是不舒服， 你看着信息你一定会感觉充满能量，爱生活，祝你每一天都快乐 🤗🤗🍁🍁🍃</td>
+<td>Vào buổi sáng, bạn sẽ cảm thấy mệt mỏi, buồn ngủ và khó chịu. Nhưng chắc chắn, sau khi đọc thông điệp của tôi, bạn sẽ cảm thấy tràn đầy năng lượng và yêu cuộc sống. Chúc bạn một ngày tốt lành.</td>
+</tr>
+
+<tr><td id="p2" class="tit2" colspan="3">GỌI ĐIỆN KHẨU GIẢNG</td></tr> 
+
+<tr>
+<td>我打电话给你可以吗？</td>
+<td>Tôi có thể gọi điện lại cho bạn được không?</td>
+</tr>
+<tr>
+<td>太好了! 我还有些消息想跟您分享，我能不能给您打电话？</td>
+<td>Tốt rồi, tôi có thêm thông tin muốn chia sẻ nhiều hơn, tôi có thể gọi cho bạn không?</td>
+</tr>
+<tr>
+<td>你听明白了吗？</td>
+<td>Bạn nghe có hiểu không?</td>
+</tr>
+<tr>
+<td>你现在怎么样？方便接电话吗？</td>
+<td>Bạn thế nào rồi, bây giờ có nghe máy được không?</td>
+</tr>
+<tr>
+<td>我打字不方便。您看我能不能给您打个电话</td>
+<td>Chat không tiện, xin phép gọi lại cho bạn nhé!</td>
+</tr>
+<tr>
+<td>对不起，网络不好，你打过来给我可以吗？</td>
+<td>Xin lỗi mạng kém quá. Bạn gọi lại cho mình được không?</td>
+</tr>
+<tr>
+<td>您现在有空吗? 我可不可以给您打电话？</td>
+<td>Bây giờ bạn có rảnh không, tôi gọi lại cho bạn nhé!</td>
+</tr>
+<tr>
+<td>您看我能不能打电话为您放这段广播</td>
+<td>Tôi xin phép gọi lại cho bạn, nghe xong, bạn sẽ hiểu!</td>
+</tr>
+<tr>
+<td>今天能认识就是缘分，希望您能够接电话</td>
+<td>Gặp nhau hôm nay cũng là duyên phận, xin hãy bắt máy nhé!</td>
+</tr>
+<tr>
+<td>不知道你有什么疑惑吗，请允许我给你打个电话，好吗？</td>
+<td>Không biết bạn có thắc mắc gì không, nên tôi xin phép gọi cho bạn nhé!</td>
+</tr>
+<tr>
+<td>不想你所想象的那样，我给你打个电话吧？</td>
+<td>Không phải như bạn nghĩ đâu, để tôi gọi điện lại nói cho bạn thêm nhé!</td>
+</tr>
+<tr>
+<td>您现在有空吗？我们可以打电话聊聊吗？</td>
+<td>Bạn bây giờ đã rảnh chưa, tôi gọi lại nói chuyện với bạn nhé (tình huống gọi lai khi lần trước họ bận)</td>
+</tr>
+<tr>
+<td>你现在不方便接电话吗？那我改天再打给你哦。趁着在闲着的时候，您就看看这些消息啊</td>
+<td>Bây giờ bạn không tiện nghe máy à, vậy xin phép lúc khác gọi lại cho bạn nhé, trong lúc rảnh bạn có thể đọc thêm những thông tin mà tôi gửi.</td>
+</tr>
+<tr>
+<td></td>
+<td>Vậy tốt quá rồi!</td>
+</tr>
+<tr>
+<td>你所看到的消息常被媒体歪曲事实编造谎言，所以请允许我打个电话给你解释一下</td>
+<td>Những thông tin bạn biết được thường bị truyền thông trong nước bịa đặt bóp méo, nên tôi xin phép gọi để giải thích thêm cho bạn nhé!</td>
+</tr>
+<tr>
+<td>"你也知道了，最近天灾人祸、疫情洪水连绵不断。 我只希望大家都平安，所以有些话想跟您分享。我能给你打个电话吗？"</td>
+<td>Bạn biết đấy gần đây thiên tai nhân họa, dịch bệnh lũ lụt rất nhiều, tôi chỉ muốn mọi người được bình an, nên có một số điều thật tâm muốn chia sẻ với bạn. Có thể gọi cho bạn được không?</td>
+</tr>
+<tr>
+<td>请给我几分钟好吗？我想跟您分享的消息至关重要，并且我想这对您有好处的。</td>
+<td>Hãy cho tôi vài phút, những điều tôi chia sẻ rất quan trọng và hữu ích với bạn.</td>
+</tr>
+<tr>
+<td>我送你一首歌，这就是一个很有意思的小礼物。</td>
+<td>Tôi tặng bạn một bài hát nhé, một món quà rất ý nghĩa.</td>
+</tr>
+<tr>
+<td>你还想听别的吗？</td>
+<td>Bạn có muốn nghe thêm nữa không?</td>
+</tr>
+<tr>
+<td>因为不知道你有没有什么疑惑，所以请允许我为您放这段广播</td>
+<td>Không biết bạn có thắc mắc gì không, nên tôi xin phép gọi điện lại phát cho bạn nghe băng thu âm này nhé.</td>
+</tr>
+<tr>
+<td>请允许我为您放这段录音</td>
+<td>Tôi xin phép gọi điện bật cho bạn nghe một đoạn thu âm.</td>
+</tr>
+<tr>
+<td>我打电话给您放这段广播，好吗？</td>
+<td>Tôi xin phép gọi điện bật cho bạn nghe một đoạn thu âm được không!</td>
+</tr>
+<tr>
+<td>我发给你一些真实信息吧。</td>
+<td>Tôi gửi bạn thông tin chân thật này nhé!</td>
+</tr>
+<tr>
+<td>你打得开我发的链接吗？</td>
+<td>Bạn có vào được liên kết tôi gửi không!</td>
+</tr>
+<tr>
+<td>打扰您我很对不起。我只是想给您带来更美好的。</td>
+<td>Rất xin lỗi nếu tôi có làm phiền bạn. Tôi chỉ muốn đem những điều tốt đẹp đến với bạn.</td>
+</tr>
+<tr>
+<td>我朋友会中文，我就让她来和你聊天， 好吗？</td>
+<td>Bạn của tôi học được một chút tiếng Trung, tôi sẽ nhờ cô ấy vào nói chuyện thêm với bạn nhé.</td>
+</tr>
+<tr>
+<td>我中文说的不是很好。我请朋友给您打电话，好吗？</td>
+<td>Tôi không biết tiếng Trung, vậy tôi nhờ bạn của tôi gọi lại cho bạn nhé!</td>
+</tr>
+<tr>
+<td>真不好意思，我的中文讲的不好，我请我朋友跟你聊一下，好吗？</td>
+<td>Tôi không hiểu tiếng Trung lắm nên tôi xin lỗi, tôi kết nối máy để bạn tôi nói chuyện với bạn nhé.</td>
+</tr>
+<tr>
+<td>我不会太多中文，所以我请朋友来给你打电话，好吗？</td>
+<td>Tôi không biết nhiều tiếng Trung nên tôi nhờ bạn của tôi gọi cho bạn nhé?</td>
+</tr>
+<tr>
+<td>我岁数比较大了，请你看看我发的链接。如果需要的话，我会请朋友打电话给你</td>
+<td>Tôi đã khá lớn tuổi, bạn hãy tìm hiểu thêm ở link tôi gửi và nếu cần tôi sẽ nhờ bạn của tôi gọi lại cho bạn.</td>
+</tr>
+<tr>
+<td>你好，加好友打开此网页会看到另一番景象。请下载一个谷歌 或火狐浏览器 用浏览器打开。</td>
+<td>Chào bạn, kết bạn xong, mở link này sẽ thấy một cảnh tượng hoàn toàn khác. Bạn hãy tải Google hoặc trình duyệt Web vượt tường lửa, trình duyệt web để mở link trên.</td>
+</tr>
+
+
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
