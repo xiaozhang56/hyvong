@@ -37,7 +37,7 @@ var myvar = '<div id="head">'+
 '		<a href="ten.html">Đặt tên nick</a>'+
 '		<a href="giaotiepnt.html">Giao tiếp nhắn tin</a>'+
 '		<a href="giaotiepkg.html">Giao tiếp khẩu giảng</a>'+
-'   <a href="nghenghiep.html">Nghề nghiệp</a>      '+
+'   <a href="nghenghiep.html">Nghề nghiệp và tên</a>      '+
 '   <a href="nhanvat.html">Nhân vật</a>      '+
 '   <a href="moment.html">Đăng khoảnh khắc</a>      '+
 '		<a href="groupname.html">Đặt tên nhóm</a>			'+
