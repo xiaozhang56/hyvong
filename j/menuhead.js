@@ -11,8 +11,8 @@ if (x != d.getDay()) {
   {
     localStorage.removeItem("login");
    // localStorage.removeItem("thongbao");
-    //window.location.href = "https://vn.minghui.org/";
-    alert("Sai mật khẩu ");
+    window.location.href = "https://www.google.com/";
+
   }	
 }
 
