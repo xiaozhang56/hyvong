@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Giao tiếp 2</title>
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	
+</head>
+<body class="w640">
+	<script type="text/javascript" src="../j/j2.js"></script>
+	
+	<script>
+		$(document).ready( function(){
+
+			$("#tblList tr").append("<td><span class='copybtn'>Copy</span></td>");
+
+			$(document).on("click", ".copybtn" , function() {
+				var china = $(this).parent().parent("tr").find("td:nth-child(2)").text();
+				copyToClipboard(china);
+				//$("#tblList tr").removeClass("act");
+				$(this).parent().parent("tr").addClass("act");
+				$(this).text("Đã copy");
+				$(this).delay(3000).queue(function(n) { 
+					$(this).text("Copy");
+					$("tr").removeClass("act");
+				});
+			});
+
+		});
+
+		function copyToClipboard(text) {
+			var dummy = document.createElement("textarea");                
+			document.body.appendChild(dummy);                
+			dummy.value = text;
+			dummy.select();
+			document.execCommand("copy");
+			document.body.removeChild(dummy);
+		}
+
+	</script>
+	<style>
+	body{ font-family: Arial; }
+	table{ border-collapse:collapse ; }
+	td{ padding: 10px; border: 1px solid #ccc; font-size: 18px; }
+	tr.act{ background: #ccc; }
+	.copybtn{ background: #f00; color: #fff; padding: 10px; display: block; }
+</style>
+<center>
+	<h1>Kết nối - 接線人員</h1>
+</center>
+<table id="tblList">
+	<tr>
+		<td>1</td>
+		<td>您好，同修！欢迎您！让我们一起救人吧！</td>
+		<td>Xin chào đồng tu! Hoan nghênh bạn!</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>我在</td>
+		<td>Tôi đây</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>你还在吗?</td>
+		<td>Bạn vẫn còn đó chứ</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>我开始打哦!</td>
+		<td>Tôi bắt đầu gọi cho người TQ nhé!</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>您听到电话铃声吗？我在给他们打!</td>
+		<td>Bạn có nghe thấy tiếng chuông reo không. tôi đang kết nối với họ!</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>你听到他说话吗?</td>
+		<td>Bạn có nghe thấy họ nói không?</td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>他们已接电话了, 你跟他说话吧！</td>
+		<td>Họ nhấc máy rồi đó, bạn hãy nói chuyện với họ đi!</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>下一个电话</td>
+		<td>Cuộc gọi kế tiếp</td>
+	</tr>
+	<tr>
+		<td>9</td>
+		<td>他说 "什么都听不到"</td>
+		<td>Chúng sinh bảo là không nghe thấy gì!</td>
+	</tr>
+	<tr>
+		<td>10</td>
+		<td>他没有接。</td>
+		<td>Họ không nghe máy!</td>
+	</tr>
+	<tr>
+		<td>11</td>
+		<td>要不要重拨呢?</td>
+		<td>Có cần gọi lại không?</td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>我再打给那个人!</td>
+		<td>Tôi đang gọi lại người đó</td>
+	</tr>
+	<tr>
+		<td>13</td>
+		<td>他挂了。</td>
+		<td>Họ ngắt máy rồi!</td>
+	</tr>
+	<tr>
+		<td>14</td>
+		<td>结果如何，请简单写！</td>
+		<td>Kết quả thế nào, hãy ghi ngắn gọn!</td>
+	</tr>
+	<tr>
+		<td>15</td>
+		<td>他明白了吗?</td>
+		<td>Họ có minh bạch không?</td>
+	</tr>
+	<tr>
+		<td>16</td>
+		<td>还有关于这个人的更多笔记吗？</td>
+		<td>Có ghi chú gì thêm với người này không?</td>
+	</tr>
+	<tr>
+		<td>17</td>
+		<td>是我们帮他退还是他以前退出了？</td>
+		<td>Chúng ta thoái hay họ thoái từ trước?</td>
+	</tr>
+	<tr>
+		<td>18</td>
+		<td>他退不退呢?</td>
+		<td>Họ có thoái không?</td>
+	</tr>
+	<tr>
+		<td>19</td>
+		<td>他们取消了朋友!</td>
+		<td>Họ đã hủy kết bạn rồi!</td>
+	</tr>
+	<tr>
+		<td>20</td>
+		<td>我挂断电话并重拨打给那个人吧</td>
+		<td>Tôi thử ngắt máy gọi lại người đó nhé</td>
+	</tr>
+	<tr>
+		<td>21</td>
+		<td>如果我们俩短线，我会重复重复邀请，您立刻接受哦</td>
+		<td>Nếu bị ngắt kết nối thì tôi sẽ thực hiện kết nối lại và bạn kết nối ngay nhé</td>
+	</tr>
+	<tr>
+		<td>22</td>
+		<td>请定期发信号让我知道我们在仍然连接</td>
+		<td>Hãy thường xuyên chát báo hiệu để tôi biết chúng ta vẫn đang kết nối</td>
+	</tr>
+	<tr>
+		<td>23</td>
+		<td>你听得到吗? 我看到他在接听。</td>
+		<td>Bạn có nghe thấy không, tôi thấy vẫn còn kết nối</td>
+	</tr>
+	<tr>
+		<td>24</td>
+		<td>你身边很吵</td>
+		<td>Bên bạn có nhiều tiếng ồn</td>
+	</tr>
+	<tr>
+		<td>25</td>
+		<td>仍然与众生保持连接, 您能听见他们在说什么吗?</td>
+		<td>Vẫn đang kết nối với chúng sinh, bạn có nghe thấy họ nói gì không?</td>
+	</tr>
+	<tr>
+		<td>26</td>
+		<td>您是否对他们说了再见? 我看, 众生并没有断开, 继续讲还是挂断?</td>
+		<td>Bạn chào tạm biệt họ rồi à, tôi thấy chúng sinh vẫn chưa ngắt máy, có nói tiếp hay ngắt máy?</td>
+	</tr>
+	<tr>
+		<td>27</td>
+		<td>已再拨打但是线路忙</td>
+		<td>Gọi lại nhưng đường dây bận</td>
+	</tr>
+	<tr>
+		<td>28</td>
+		<td>因为我用手机给他打电话，所以我无法给他发短信，我会尝试在微信上找找他并向他们发真相</td>
+		<td>Tôi gọi cho họ từ số điện thoại nên không nhắn tin được với họ, tôi sẽ thử tìm họ trên wechat và gửi thông tin cho họ</td>
+	</tr>
+	<tr>
+		<td>29</td>
+		<td>稍等一下哈</td>
+		<td>Đợi tôi một chút</td>
+	</tr>
+	<tr>
+		<td>30</td>
+		<td>要不要发更多真相吗?</td>
+		<td>Có cần gửi thêm chân tướng không?</td>
+	</tr>
+	<tr>
+		<td>31</td>
+		<td>我们将使用另一个微信就再进行接近他</td>
+		<td>Chúng tôi sẽ sử dụng một WeChat khác để tiếp cận họ!</td>
+	</tr>
+	<tr>
+		<td>32</td>
+		<td>等一下, 我把众生的通信保存在到系统上</td>
+		<td>Đợi một chút tôi lưu lại thông tin chúng sinh vào hệ thống</td>
+	</tr>
+	<tr>
+		<td>33</td>
+		<td>完成, 我们继续打电话给下一个人吧</td>
+		<td>Xong rồi, chúng ta tiếp tục gọi người kế tiếp nha</td>
+	</tr>
+	<tr>
+		<td>34</td>
+		<td>好的，我会发给他更多信息!</td>
+		<td>Được, tôi sẽ gửi thêm thông tin cho họ.</td>
+	</tr>
+	<tr>
+		<td>35</td>
+		<td>通话持续了xx 分钟, xx秒, 你听到他说话吗?</td>
+		<td>Cuộc gọi kéo dài xx phút, xx giây, bạn có nghe thấy họ nói không?</td>
+	</tr>
+	<tr>
+		<td>36</td>
+		<td>我听到您那边电脑的声音，但听不到您的声音</td>
+		<td>Tôi nghe thấy âm thanh trên máy của bạn nhưng không nghe thấy tiếng bạn</td>
+	</tr>
+	<tr>
+		<td>37</td>
+		<td>我记了笔记，我们将进一步与他们谈谈!</td>
+		<td>Tôi đã ghi chú lại và chúng tôi sẽ chat thêm với họ!</td>
+	</tr>
+	<tr>
+		<td>38</td>
+		<td>您发短信吧，我将保存结果!</td>
+		<td>Bạn nhắn tin đi, tôi sẽ lưu lại kết quả!</td>
+	</tr>
+	<tr>
+		<td>39</td>
+		<td>网络不好，请再检查网络连接!</td>
+		<td>Mạng hơi yếu, kiểm tra lại kết nối!</td>
+	</tr>
+	<tr>
+		<td>40</td>
+		<td>您请一位有经验的人为您检查设备哈，可能是您的耳机或麦克风有问题啊。
+			您请技同修来帮助您，或请小组中的其他同修来帮助您，同时发正念哈！
+		</td>
+		<td>Hãy hỏi một người có kinh nghiệm hơn kiểm tra thiết bị cho bạn, có thể do tai nghe hoặc loại mic bạn dùng. 
+			Hãy nhờ một đồng tu kỹ thuật giúp bạn đi, hoặc hỏi đồng tu khác trong nhóm xem giúp, trong khi đó hãy PCN!
+		</td>
+	</tr>
+	<tr>
+		<td>41</td>
+		<td>我们断开连接并重新连接!</td>
+		<td>Chúng ta thử ngắt kết nối và kết nối lại</td>
+	</tr>
+	<tr>
+		<td>42</td>
+		<td>现在, 我将请一位同修以帮助你检查声音</td>
+		<td>Giờ tôi sẽ gọi cho 1 đồng tu để giúp bạn kiểm tra âm thanh</td>
+	</tr>
+	<tr>
+		<td>43</td>
+		<td>关闭其他浏览器和软件, 因为它可能会占用您的麦克风</td>
+		<td>Hãy tắt các trình duyệt và phần mềm khác vì nó có thể chiếm dụng microphone của bạn</td>
+	</tr>
+	<tr>
+		<td>44</td>
+		<td>请检查您的设备，我正在尝试打我的账户，但我听不到您说什么！</td>
+		<td>Bạn kiểm tra lại thiết bị nhé, tôi đang thử gọi vào nick của tôi nhưng không nghe thấy bạn nói gì!</td>
+	</tr>
+	<tr>
+		<td>45</td>
+		<td>时间到了, 我们休息吧.</td>
+		<td>Hết giờ phù hợp để gọi điện, chúng ta nghỉ nhé.</td>
+	</tr>
+	<tr>
+		<td>46</td>
+		<td>请选择可用的句话，我中文不太好。翻译软件不了解您的意思</td>
+		<td>Hãy chọn các câu chat có sẵn, tôi không hiểu tiếng trung nhiều lắm. Phần mềm dịch không rõ ý của bạn</td>
+	</tr>
+	<tr>
+		<td>47</td>
+		<td>请问上次通话的结果是什么? 您给那个众生讲了xxxx分钟，然后咱们断开了连接，但我还没有收到结果！</td>
+		<td>Tôi muốn hỏi bạn kết quả cuộc gọi lần trước, bạn giảng cho chúng sinh trong xxxx phút, sau đó chúng ta bị ngắt kết nối mà tôi chưa nhận được kết quả!</td>
+	</tr>
+	<tr>
+		<td>48</td>
+		<td>请尝试更换耳机（可能是因为耳机不支持录音），请尝试拔下耳机。</td>
+		<td>Hãy thử thay lại tai nghe của bạn, có thể do tai nghe không hỗ trợ thu tiếng, hãy thử bằng cách rút tai nghe ra</td>
+	</tr>
+	<tr>
+		<td>49</td>
+		<td>今天停在这里!</td>
+		<td>Hôm nay dừng tại đây nhé!</td>
+	</tr>
+	<tr>
+		<td>50</td>
+		<td>再见!</td>
+		<td>Tạm biệt, hẹn gặp lại</td>
+	</tr>
+	<tr>
+		<td>51</td>
+		<td>这个账号好朋友已经打完，我会继续加其他朋友，今天停在这里。请您在大厅等稍候会有其他同修连接。感谢您的配合</td>
+		<td>Danh sách bạn bè ở tài khoản này đã gọi hết, tôi sẽ tiếp tục thêm bạn bè, hôm nay dừng tại đây. Mời bạn đợi 1 chút ở phòng chat sẽ có đồng tu khác kết nối. Cảm ơn sự phối hợp của bạn</td>
+	</tr>
+	<tr>
+		<td>52</td>
+		<td>他只听xxxx秒， 然后挂断了</td>
+		<td>Họ chỉ nghe có xxxx giây, sau đó cúp máy rồi!</td>
+	</tr>
+	<tr>
+		<td>53</td>
+		<td>刚刚这个通话仅xxxx秒，他们挂断电话了，您能听到他说什么呢？</td>
+		<td>Cuộc gọi vừa xong chỉ có xxxx giây, xong họ cúp máy rồi, bạn có nghe thấy họ nói không?</td>
+	</tr>
+	<tr>
+		<td>54</td>
+		<td>我正在使用xxxxx软件打电话，所以当那个号码不存在或没有人应答时，可能会有其他响应声音。</td>
+		<td>Tôi đang gọi bằng phần mềm xxxxx nên có thể có những âm thanh hồi đáp khác khi gặp số không tồn tại hoặc họ không nghe máy.</td>
+	</tr>
+	<tr>
+		<td>55</td>
+		<td>我在检查声音，你能听到吗？</td>
+		<td>Tôi đang kiểm tra âm thanh. Bạn có nghe thấy tiếng nhạc không?</td>
+	</tr>
+	<tr>
+		<td>56</td>
+		<td>OK、行、好</td>
+		<td>OK/Được/Tốt</td>
+	</tr>
+	<tr>
+		<td>57</td>
+		<td>这台电话没有铃声，请注意一下我的信息才知道几时他们接电话的，好吗？</td>
+		<td>Máy điện thoại này không có nhạc chuông. Bạn hãy chú ý các tin nhắn của tôi để biết được khi nào người Trung Quốc bắt máy nhé! Được không?</td>
+	</tr>
+	<tr>
+		<td>58</td>
+		<td>这位众生我已做过铺垫</td>
+		<td>Chúng sinh này tôi đã gửi qua chân tướng cơ bản</td>
+	</tr>
+	<tr>
+		<td>59</td>
+		<td>我正在拨打他的电话号码, 我会在微信上找他的 ID, 以便与他们成为朋友并发更多真相</td>
+		<td>Tôi đang gọi vào số điện thoại của họ, tôi sẽ tìm id của họ trên wechat để kết bạn với họ và gửi thêm chân tướng</td>
+	</tr>
+	<tr>
+		<td>60</td>
+		<td>谢谢同修，我们今天就到这吧，辛苦您了！</td>
+		<td>Cảm ơn đồng tu, hôm nay chúng ta dừng tại đây nhé. Bạn vất vả rồi!</td>
+	</tr>
+</table>
+</body>
+</html>
