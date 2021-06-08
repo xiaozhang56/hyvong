@@ -18,16 +18,22 @@
 			$("#tblList tr").append("<td><span class='copybtn'>Copy</span></td>");
 
 			$(document).on("click", ".copybtn" , function() {
-				var china = $(this).parent().parent("tr").find("td:nth-child(2)").text();
-				copyToClipboard(china);
-				//$("#tblList tr").removeClass("act");
-				$(this).parent().parent("tr").addClass("act");
-				$(this).text("Đã copy");
-				$(this).delay(3000).queue(function(n) { 
-					$(this).text("Copy");
-					$("tr").removeClass("act");
-				});
-			});
+
+            var str="";
+            str += $(this).parent().parent("tr").find("td:nth-child(1)").text() + ".\n";
+            str += $(this).parent().parent("tr").find("td:nth-child(2)").text();
+            str += "\n";
+            str += $(this).parent().parent("tr").find("td:nth-child(3)").text();
+
+            copyToClipboard(str);
+            //$("#tblList tr").removeClass("act");
+            $(this).parent().parent("tr").addClass("act");
+            $(this).text("Đã copy");
+            $(this).delay(3000).queue(function(n) { 
+               $(this).text("Copy");
+               $("tr").removeClass("act");
+            });
+         });
 
 		});
 
