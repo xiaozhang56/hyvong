@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Giao tiếp 2</title>
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="c/c.css">
+</head>
+<body class="w640">
+	<script type="text/javascript" src="j/j.js"></script>
+	<script type="text/javascript" src="j/menuhead.js"></script>
+	<script type="text/javascript" src="j/menu.js"></script>
+	<script>
+		$(document).ready( function(){
+
+
+			$("#chuc tr").append("<td><span class='xembtn'>Xem</span></td>");
+			$(document).on("click", ".xembtn" , function() {
+
+				$("#chuc .chucimg").parent().remove();
+				var img = $(this).parent().parent("tr").find("td:nth-child(1)").text();
+				console.log(img);
+
+				var stt = $(this).parent().parent("tr").index() + 1;
+				
+				var html = "<tr><td class='chucimg' colspan='4'><div>";
+				
+				var arr = img.split(',');
+				$.each( arr, function( index, value ) {
+					html += "<img src='i/chuc/"+value+".jpg' >";
+
+				});
+				
+				html +="</div></td></tr>";
+
+				$("#chuc tr:nth-child("+stt+")").after(html);
+				
+			});
+
+
+
+
+		})
+	</script>
+	<style>
+	td.tit2+td{ display: none; }
+	#chuc tr td:nth-of-type(1){ display: none; }
+	#chuc tr td.chucimg{  display: table-cell; }
+	.chucimg div{ display: flex; flex-wrap: wrap; }
+	.chucimg img{ width: 48%; margin: 1%; }
+	#chude{ display: block; padding: 10px; font-size: 0.8rem; width: 98%; margin: 0 0 0.5rem 0;  }
+	#chude option{ font-size: 0.8rem; }
+	#chude.fixed{ top:0; left: 0; z-index: 99; position: fixed; }
+</style>
+<div id="content">
+	<p style="padding: 0.3rem;">Lưu ý: trên Xiwang nên sử dụng các sticker và các emotion để cho cuộc trò chuyện thêm sinh động.</p>
+	<p style="padding: 0.3rem;">Khi đã chọn được câu cần dùng, click đúp (trên PC) hoặc chạm 2 lần (trên ĐT) vào câu đó, nếu chuyển màu xanh lam là đã copy thành công.</p>
+
+	<h2 class="tit">Lời chúc & châm ngôn</h2>
+
+	<table id="chuc">
+		<tbody>
+			<tr>
+				<td >A1-1,A1-2,A1-3,A1-4,A1-5</td>
+				<td >祝一切顺利！</td>
+				<td >Chúc mọi việc thuận lợi</td>
+			</tr>
+			<tr>
+				<td >A2-1,A2-2,A2-3,A2-4,A2-5,A2-6,A2-7,A2-8,A2-9,A2-10,A2-11</td>
+				<td >祝你万事如意！</td>
+				<td >Chúc bạn vạn sự như ý</td>
+			</tr>
+			<tr>
+				<td >A3-1,A3-2</td>
+				<td >祝 你 家 庭 幸 福 和 平 安!</td>
+				<td >Chúc gia đình bạn hạnh phúc và bình an</td>
+			</tr>
+			<tr>
+				<td >A4-1,A4-2</td>
+				<td >每一天 都 是 新 的 机 会。早 上 好</td>
+				<td >Mỗi ngày mới đều là một cơ hội mới. Chào buổi sáng!</td>
+			</tr>
+			<tr>
+				<td >A5-1,A5-2,A5-3,A5-4,A5-5,A5-6,A5-7,A5-8</td>
+				<td >早上好！祝你有个幸运的一天！</td>
+				<td >Buổi sáng tốt lành! Chúc bạn có một ngày may mắn!</td>
+			</tr>
+			<tr>
+				<td >A6-1,A6-2</td>
+				<td >早上好！ 祝一切顺利！</td>
+				<td >Chào buổi sáng! Chúc mọi việc thuận lợi!</td>
+			</tr>
+			<tr>
+				<td >A7-1</td>
+				<td >祝你有美好的一天！</td>
+				<td >Chúc bạn ngày mới tốt lành!</td>
+			</tr>
+			<tr>
+				<td >A8-1</td>
+				<td >一天的开始送上我的祝福</td>
+				<td >Một ngày mới bắt đầu tôi tặng đến bạn lời chúc phúc.</td>
+			</tr>
+			<tr>
+				<td >A9-1,A9-2</td>
+				<td >祝你快乐，幸福，健康</td>
+				<td >Chúc bạn vui vẻ, hạnh phúc, mạnh khỏe!</td>
+			</tr>
+			<tr>
+				<td >A10-1,A10-2,A10-3,A10-4,A10-5</td>
+				<td >愿您天天开心如意。</td>
+				<td >Chúc bạn ngày nào cũng vui vẻ như ý muốn!</td>
+			</tr>
+			<tr>
+				<td >A11-1,A11-2</td>
+				<td >愿一个问候带给你一个新的心情，愿一个祝福带给你一个新的起点。</td>
+				<td >Mong lời hỏi thăm mang đến cho bạn tâm tình mới, mong một lời chúc mang đến cho bạn khởi đầu mới!</td>
+			</tr>
+			<tr>
+				<td >A12-1,A12-2,A12-3</td>
+				<td >梦想在向你奔跑，幸福在向你靠拢。早安。</td>
+				<td >Ước mơ đang chạy đến bên bạn, hạnh phúc đang kề bên bạn, chào buổi sáng!</td>
+			</tr>
+			<tr>
+				<td >A13-1,A13-2,A13-3,A13-4</td>
+				<td >愿我的祝福带给你一天的好心情</td>
+				<td >Mong lời chúc phúc của tôi mang đến cho bạn một tâm tình tốt.</td>
+			</tr>
+			<tr>
+				<td >A14-1,A14-2</td>
+				<td >善良的人总是快乐，感恩的人总是富有，
+					心态好的人总是阳光，
+					让我们带着感恩与善良，
+				拥抱阳光温暖前行，早安！</td>
+				<td >Người lương thiện luôn vui vẻ, người biết cảm ơn luôn giàu có,
+					Những người tâm tình tốt luôn là ánh dương,
+					Chúng tôi hãy sống biết ơn và lương thiện
+				Chúng ta hãy đi về phía ánh sáng của mặt trời ấm áp. Chúc buổi sáng tốt lành!</td>
+			</tr>
+			<tr>
+				<td >A15-1,A15-2</td>
+				<td >问候有心，祝福有爱，牵挂有情。愿我问候的人，开心、幸福、快乐！
+				早上好！周末愉快</td>
+				<td >Lời chào hữu tâm, lời chúc hữu ái, quan tâm bằng tình cảm. Mong bạn vui vẻ hạnh phúc. Chào buổi sáng, Chúc các bạn cuối tuần vui vẻ</td>
+			</tr>
+			<tr>
+				<td >A16-1,A16-2</td>
+				<td >人生无法做到完美，我们就尽力好了，在生命的旅途中，我们一直寻觅，却忽略了眼前的风景，其实美好都深藏在岁月中，春天的丁香，夏天的细雨，秋天的落叶，冬天的雪花都是美好，亲，早上好！</td>
+				<td >Cuộc sống không bao giờ hoàn hảo nên chúng ta chỉ cần cố gắng hết sức là đủ. Trong hành trình của cuộc đời, chúng ta luôn đi tìm kiếm mà quên đi cảnh tượng trước mắt. Thực ra, vẻ đẹp luôn ẩn giấu theo năm tháng, là hoa bằng lăng trong mùa xuân , mưa phùn vào mùa hè, và lá rơi vào mùa thu. Những bông tuyết vào mùa đông thật đẹp, bạn tốt chào buổi sáng</td>
+			</tr>
+			<tr>
+				<td >A17-1,A17-2,A17-3,A17-4,A17-5,A17-6</td>
+				<td >採一滴甘露送你，祝你健康！携一缕清风送你，祝你幸福！折一只纸鹤送你，祝你平安！道一声祝福送你，祝你早安！</td>
+				<td >Gửi bạn giọt mật ngọt ngào, chúc bạn khỏe mạnh! Mang một tia gió thoảng cho bạn , chúc bạn hạnh phúc! Gấp được con hạc giấy cho bạn, chúc bạn bình an! Gửi đến bạn lời chúc buổi sáng tốt lành!</td>
+			</tr>
+			<tr>
+				<td >A18-1,A18-2,A18-3</td>
+				<td >梦醒人间看微雨，江山还以旧温柔。祝你平安！</td>
+				<td >Khi tỉnh giấc mơ màng nhìn mưa nhẹ, nước non vẫn dịu dàng. Chúc bạn bình an</td>
+			</tr>
+			<tr>
+				<td>A19-1,A19-2,A19-3,A19-4</td>
+				<td>有趣的人生，一半是山川湖海。 祝你工作顺利！</td>
+				<td>Một cuộc sống thú vị, phân nửa ở núi sông. Chúc bạn công việc thuận lợi</td>
+			</tr>
+			<tr>
+				<td >A20-1,A20-2</td>
+				<td >记忆的梗上，谁不有两三朵娉婷，披着情绪的花。祝你心情愉快！</td>
+				<td >Trên cây ký ức, ai cũng có hai hoặc ba bông hoa , được điểm tô bằng những bông hoa đầy cảm xúc. Chúc bạn tâm tình vui vẻ</td>
+			</tr>
+			<tr>
+				<td >A21-1</td>
+				<td >努力经营当下，直至未来明朗。 祝你幸运！</td>
+				<td >Làm việc chăm chỉ để có tương lai tươi sáng. Chúc bạn may mắn.</td>
+			</tr>
+			<tr>
+				<td>A22-1</td>
+				<td>回眸三生琥珀色，转身一世琉璃白。 祝你永远有一颗年轻的心！</td>
+				<td>Nhìn lại Sansheng Amber, anh quay lại cuộc sống đầu tiên của Liulibai.
+				Nhân sinh chớp mắt qua đi, chúc bạn luôn giữ tâm hồn tươi trẻ</td>
+			</tr>
+			<tr>
+				<td>A23-1,A23-2,A23-3</td>
+				<td>日落跌进迢迢星野，人间忽晚，山河已秋。</td>
+				<td>Hoàng hôn buông xuống cánh đồng, nhân thế muộn màng, sông núi cũng đã sang thu</td>
+			</tr>
+			<tr>
+				<td>A24-1</td>
+				<td>爱所有人，信任多数人，不负任何人！</td>
+				<td>Yêu thương tất cả mọi người, tin tưởng vào mọi người, đừng phụ bất cứ ai!!</td>
+			</tr>
+			<tr>
+				<td>A25-1</td>
+				<td>不要努力成为一个成功者，要努力成为一个有价值的人！</td>
+				<td>Đừng cố gắng trở thành một người thành công mà hãy cố gắng trở thành một người có giá trị!</td>
+			</tr>
+			<tr>
+				<td >A26-1</td>
+				<td >浅水是喧哗的，深水是沉默的。</td>
+				<td >Vẻ đẹp thật sự không nhất định thể hiện ra bên ngoài</td>
+			</tr>
+			<tr>
+				<td >A27-1,A27-2,A27-3</td>
+				<td >我们在黑暗中并肩而行，走在各自的朝圣路上。</td>
+				<td >Chúng tôi sánh bước bên nhau trong bóng tối, đi trên những con đường hành hương của mình.</td>
+			</tr>
+			<tr>
+				<td >A28-1,A28-2,A28-3</td>
+				<td >你不快乐，是因为忽略了太多美好的东西。</td>
+				<td >Bạn không vui vì đã bỏ qua quá nhiều thứ đẹp đẽ.</td>
+			</tr>
+			<tr>
+				<td >A29-1,A29-2,A29-3,A29-4</td>
+				<td >优等的心，不必华丽，但必须坚固！</td>
+				<td >Một trái tim tốt không cần phải quá hoa lệ, nhưng nhất định phải kiên cường!</td>
+			</tr>
+			<tr>
+				<td >A30-1</td>
+				<td >使人疲惫的不是远方的的高山，而是鞋子里的一粒沙子。</td>
+				<td >Núi cao phía xa không làm người ta mệt mỏi, mà trong giày có hạt cát
+				Điều khiến người ta cảm thấy mệt mỏi không phải là sự vất vả của chặng đường dài, mà đôi khi ở những chi tiết nhỏ bé ta không hề chú ý, lại quyết định đến sự thành công.</td>
+			</tr>
+			<tr>
+				<td >A31-1</td>
+				<td >一个人使劲踮起脚尖靠近太阳的时候，全世界都挡不住她的阳光！</td>
+				<td>câu chào buổi sáng: Khi một người cố gắng kiễng chân đến gần mặt trời, cả thế giới không thể cản được ánh nắng của cô ấy!</td>
+			</tr>
+			<tr>
+				<td >A32-1</td>
+				<td >如约而至，是个多么美好的词，等的辛苦，却从不辜负。</td>
+				<td>“Như đã hẹn” là một từ tuyệt vời như thế nào chứ, chờ đợi rất khó khăn nhưng bị phụ lòng.</td>
+			</tr>
+			<tr>
+				<td >A33-1,A33-2,A33-3</td>
+				<td >你所看到的惊鸿，都曾经被平庸磨炼！</td>
+				<td>Ngọc bất trác bất thành khí，con người có xuất phát điểm giống nhau,chỉ có thông qua khổ luyện mới thành tài</td>
+			</tr>
+			<tr>
+				<td >A34-1,A34-2,A34-3,A34-4</td>
+				<td >常想一二，不思八九，事事如意！</td>
+				<td>cuộc sống muôn màu muôn vẻ, hãy sống lạc quan, luôn nghĩ đến những điều tốt đẹp, thì vạn sư như ý</td>
+			</tr>
+			<tr>
+				<td >A35-1,A35-2</td>
+				<td >所得，所不得，皆不如心安理得。</td>
+				<td>những thứ k phải của bạn thì vĩnh viễn không phải của bạn, nếu bạn nghĩ cách có được thì cũng cảm thấy không hạnh phúc gì. Chi bằng cứ sống đúng với lương tâm, đúng với chính mình.</td>
+			</tr>
+			<tr>
+				<td >A36-1,A36-2,A36-3</td>
+				<td >清醒，知趣，明得失，知进退。</td>
+				<td>Thanh tỉnh, suy nghĩ thấu triệt, biết được mất, biết tiến biết lùi</td>
+			</tr>
+			<tr>
+				<td >A37-1,A37-2,A37-3</td>
+				<td >将喜欢的一切留在身边，这便是努力的意义。</td>
+				<td>Ý nghĩ của sự cố gắng là bảo vệ những điều mình yêu thích</td>
+			</tr>
+			<tr>
+				<td >A38-1,A38-2,A38-3,A38-4,A38-5</td>
+				<td >走到今天，才懂得了昨天。</td>
+				<td>Nhìn lại quá khứ mới hiểu được sự quý giá của thời gian, hãy trân quý mọi thứ bạn đang có</td>
+			</tr>
+			<tr>
+				<td >A39-1,A39-2</td>
+				<td >人间皆是浪漫，日落尤其温柔！</td>
+				<td>Tâm trạng vui vẻ, lạc quan sẽ nhìn thấy thế giới này thật tốt đẹp và ngập tràn tình yêu</td>
+			</tr>
+			<tr>
+				<td >A40-1</td>
+				<td >独自撑伞的日子，也一定要顺顺利利！</td>
+				<td>Dù có ra sao đi nữa, chúc bạn vạn sự hanh thông</td>
+			</tr>
+		</tbody>
+	</table> 
+
+</div>
+</body>
+</html>
