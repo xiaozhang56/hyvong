@@ -28,7 +28,7 @@
             copyToClipboard(str);
             //$("#tblList tr").removeClass("act");
             $(this).parent().parent("tr").addClass("act");
-            $(this).text("Đã copy");
+            $(this).text("Copy OK");
             $(this).delay(3000).queue(function(n) { 
                $(this).text("Copy");
                $("tr").removeClass("act");
@@ -56,6 +56,7 @@
    tr.act{ background: #ccc; }
    .copybtn{ background: #f00; color: #fff; padding: 10px 20px; display: block; }
    h1{ font-size: 16px; margin:  10px;  }
+   tr:hover{ background: #ddd; }
 </style>
      <center>
         <h1>Khẩu giảng - 口讲</h1>
