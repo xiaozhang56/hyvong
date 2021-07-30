@@ -41,6 +41,8 @@
 							alert('Đã thêm dữ liệu');	
 							submit.text("Gửi");									
 							submit.attr("readonly", false); 
+							$("#url").val("");
+							$("#ketqua").val("");
 						}
 					}
 				});
@@ -65,7 +67,7 @@
 		
 <input type="hidden" id="copy">
 		<h1>Gửi thông tin</h1>
-		
+
 		<form id="form" method="GET" action="https://script.google.com/macros/s/AKfycbyRQqoluM4ddx77yT6fufZgKYpM7TVsLqFSNTYW5HBgXRjLAOQB/exec">
 			
 			<input type="text" name="url" id="url" placeholder="Link" />			
