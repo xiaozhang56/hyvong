@@ -45,6 +45,7 @@
 							$("#ketqua").val("");
 							$("#ketqua").val("");
 							$("#ghichu").val("");
+							$("#nhiemvu").val("");
 						}
 					}
 				});
@@ -82,7 +83,11 @@
 				<option value="g1">Chưa thoái chưa minh bạch</option>
 				<option value="g2">Chưa thoái nhưng thiện</option>
 			</select>
-			<input type="text" id="ghichu" name="ghichu" placeholder="Ghi chú (Nếu có)"/>
+			<select name="nhiemvu" id="nhiemvu">
+				<option value="">Tỉnh thành (Nếu có)</option>
+				<option value="hanam">Hà Nam</option>
+			</select>
+			<input type="text" id="ghichu" name="ghichu" placeholder="Ghi chú.. mã máy (Nếu có)"/>
 			<button type="submit" id="submit">Gửi</button>
 		</form>		
 	</div>
