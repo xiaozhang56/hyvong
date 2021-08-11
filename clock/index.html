@@ -61,8 +61,7 @@
 							submit.text("Gửi");									
 							submit.attr("readonly", false); 
 							$("#url").val("");
-							$("#uid").val("");
-							$("#mamay").val("");
+							$("#uid").val("");							
 
 						}
 					}
@@ -93,7 +92,10 @@
 			
 			<input type="text" name="url" id="url" placeholder="Link" />			
 			<input readonly="true" type="text" name="uid" id="uid" placeholder="Uid" />			
-			<input type="text" name="mamay" id="mamay" placeholder="Mã máy" />			
+			<select name="chedo" id="chedo">
+				<option value="1">Người mới</option>
+				<option value="2">Bạn bè</option>
+			</select>
 
 			<button type="submit" id="submit">Gửi</button>
 		</form>		
