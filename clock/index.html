@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CLOCK</title>
+	<script type="text/javascript" src="../j/j2.js"></script>	
+	<script type="text/javascript">
+		$(document).ready(function()
+		{ 
+
+			$("#url").change( function(){
+				var pastedData = $(this).val();
+				$("#uid").val("Đang lấy Uid");
+				var url = pastedData.substr(pastedData.lastIndexOf("https"));
+				$(this).val(url);
+
+				data = {
+					'url': url,
+				}
+				$.post("https://zhenxiang.ga/douyin/ajax", data, function(response) {
+					if ($.trim(response)) {
+						if ($.trim(response)=="NOT") {
+							alert("Không hợp lệ");
+						}
+						else{						
+							$("#uid").val($.trim(response));
+						}					
+					}
+				});
+
+				
+
+			});
+
+			var submit = $("button[type='submit']");
+			submit.click(function()
+			{
+				if ($("#ketqua").val()=="" || $("#url").val()=="") {
+					alert("Hãy nhập đủ thông tin");
+					return false;
+				}
+
+				var data = $('form#form').serialize();
+				submit.text("Đang gửi...");
+				submit.attr("readonly", true); 
+				$.ajax({
+					type : 'GET', 
+					url : 'https://script.google.com/macros/s/AKfycbwnHxEfq22s7SIlDt1dFvNa9vslt0uqAZkokhadVqSuInpCS18/exec',
+
+					dataType:'json',
+					crossDomain : true,
+					data : data,
+					success : function(data)
+					{ 
+						if(data == 'false') 
+						{
+							alert('Thêm không thành công, Xin báo lại cho kỹ thuật');
+						}else{
+							alert('Đã thêm dữ liệu');	
+							submit.text("Gửi");									
+							submit.attr("readonly", false); 
+							$("#url").val("");
+							$("#uid").val("");
+							$("#mamay").val("");
+
+						}
+					}
+				});
+				return false;
+			});
+
+		});
+	</script>
+	<style>
+		body{ font-size: 18px; font-family: Tahoma; }
+		h1{ text-align: center; text-transform: uppercase; margin: 20px; font-size: 20px; }
+		#ctn{ margin: 0 auto; max-width: 1024px; }
+		form{ max-width: 94%; }
+		#form input[type="text"] , #form select{ padding: 10px; border: 1px solid #ccc; border-radius: 7px; display: block; width: 100%; margin: 10px; box-sizing: border-box; font-size: 18px; }
+
+		#form button[type="submit"] { font-size: 18px; display: block; padding: 10px;  box-sizing: border-box; margin: 10px auto; width: 200px; border: 0; background: #ccc; font-size: 18px; }
+		/*#paste{ margin: 10px 0; padding: 10px; background: #ddd; text-align: center; }*/
+	</style>
+</head>
+<body>
+	<div id="ctn">
+		
+		<input type="hidden" id="copy">
+		<h1>Gửi thông tin</h1>
+
+		<form id="form" method="GET" action="https://script.google.com/macros/s/AKfycbyRQqoluM4ddx77yT6fufZgKYpM7TVsLqFSNTYW5HBgXRjLAOQB/exec">
+			
+			<input type="text" name="url" id="url" placeholder="Link" />			
+			<input readonly="true" type="text" name="uid" id="uid" placeholder="Uid" />			
+			<input type="text" name="mamay" id="mamay" placeholder="Mã máy" />			
+
+			<button type="submit" id="submit">Gửi</button>
+		</form>		
+	</div>
+
+</body>
+</html>
