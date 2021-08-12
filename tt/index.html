@@ -9,10 +9,34 @@
 		$(document).ready(function()
 		{ 
 
+			// $("#url").change( function(){
+			// 	var pastedData = $(this).val();
+			// 	var url = pastedData.substr(pastedData.lastIndexOf("https"));  
+			// 	$("#url").val(url);
+			// });
+
 			$("#url").change( function(){
+
+				$("button[type='submit']").attr("readonly", true);
 				var pastedData = $(this).val();
-				var url = pastedData.substr(pastedData.lastIndexOf("https"));  
-				$("#url").val(url);
+				$("#uid").val("Đang lấy Uid");
+				var url = pastedData.substr(pastedData.lastIndexOf("https"));
+				$(this).val(url);
+
+				data = {
+					'url': url,
+				}
+				$.post("https://zhenxiang.ga/douyin/ajax", data, function(response) {
+					if ($.trim(response)) {
+						if ($.trim(response)=="NOT") {
+							alert("Không hợp lệ");
+						}
+						else{
+							$("button[type='submit']").attr("readonly", false); 
+							$("#uid").val($.trim(response));
+						}					
+					}
+				});			
 			});
 
 			var submit = $("button[type='submit']");
@@ -43,7 +67,7 @@
 							submit.attr("readonly", false); 
 							$("#url").val("");
 							$("#ketqua").val("");
-							$("#ketqua").val("");
+							$("#uid").val("");
 							$("#ghichu").val("");
 							$("#nhiemvu").val("");
 						}
@@ -68,17 +92,20 @@
 <body>
 	<div id="ctn">
 		
-<input type="hidden" id="copy">
+		<input type="hidden" id="copy">
 		<h1>Gửi thông tin</h1>
 
 		<form id="form" method="GET" action="https://script.google.com/macros/s/AKfycbyRQqoluM4ddx77yT6fufZgKYpM7TVsLqFSNTYW5HBgXRjLAOQB/exec">
 			
 			<input type="text" name="url" id="url" placeholder="Link" />			
+
+			<input readonly="true" type="text" name="uid" id="uid" placeholder="Uid" />
+
 			<select name="ketqua" id="ketqua">
 				<option value="">Chọn trạng thái</option>
 				<option value="t0">Thoái minh bạch</option>
 				<option value="t1">Thoái chưa nghe CT</option>
-				<option value="t2">Thoái cần gửi thêm (vượt tường lửa...)</option>
+				<option value="t2">Thoái cần gửi thêm (vượt tường lửa , Chuyển Pháp Luân...)</option>
 				<option value="tcn">Thoái cả nhà</option>				
 				<option value="g1">Chưa thoái chưa minh bạch</option>
 				<option value="g2">Chưa thoái nhưng thiện</option>
