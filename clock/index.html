@@ -41,7 +41,10 @@
 				var data = $('form#form').serialize();
 				submit.text("Đang gửi...");
 				submit.attr("readonly", true); 
-				$.ajax({
+				var chedo = $("#chedo").val();
+
+				if (chedo=="1" || chedo=="2") {
+					$.ajax({
 					type : 'GET', 
 					url : 'https://script.google.com/macros/s/AKfycbwnHxEfq22s7SIlDt1dFvNa9vslt0uqAZkokhadVqSuInpCS18/exec',
 
@@ -63,6 +66,36 @@
 						}
 					}
 				});
+
+				}
+				if (chedo=="3") {
+					$.ajax({
+					type : 'GET', 
+					url : 'https://script.google.com/macros/s/AKfycbwl8hvwAJblgCsZvRg2Uw2fhW2zeGroNu1mHcWo8xNpiS407Qm1/exec',
+
+					dataType:'json',
+					crossDomain : true,
+					data : data,
+					success : function(data)
+					{ 
+						if(data == 'false') 
+						{
+							//alert('Thêm không thành công, Xin báo lại cho kỹ thuật');
+						}else{
+							//alert('Đã thêm dữ liệu');	
+							submit.text("Gửi");									
+							submit.attr("readonly", false); 
+							$("#url").val("");
+							$("#uid").val("");							
+
+						}
+					}
+				});
+
+				}
+
+				
+
 				return false;
 			});
 
@@ -85,13 +118,14 @@
 		<input type="hidden" id="copy">
 		<h1>Gửi thông tin</h1>
 
-		<form id="form" method="GET" action="https://script.google.com/macros/s/AKfycbyRQqoluM4ddx77yT6fufZgKYpM7TVsLqFSNTYW5HBgXRjLAOQB/exec">
+		<form id="form" method="GET" >
 			
 			<input type="text" name="url" id="url" placeholder="Link" />			
 			<input readonly="true" type="text" name="uid" id="uid" placeholder="Uid" />
 			<select name="chedo" id="chedo">
-				<option value="1">Người mới</option>
-				<option value="2">Bạn bè</option>
+				<option value="1">Thêm UID khi chạy BTD (chưa lọc)</option>
+				<option value="2">Bạn bè cũ để lọc trùng</option>
+				<option value="3">Thêm UID để chạy BTD (đã lọc)</option>
 			</select>
 
 			<button type="submit" id="submit">Gửi</button>
