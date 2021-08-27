@@ -42,8 +42,8 @@
 			var submit = $("button[type='submit']");
 			submit.click(function()
 			{
-				if ($("#ketqua").val()=="" || $("#url").val()=="") {
-					alert("Hãy nhập đủ thông tin");
+				if ($("#ketqua").val()=="" || $("#url").val()=="" || $("#uid").val()=="Đang lấy Uid") {
+					alert("Nhập thiếu thông tin");
 					return false;
 				}
 
