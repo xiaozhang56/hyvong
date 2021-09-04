@@ -33,6 +33,10 @@
 			var submit = $("button[type='submit']");
 			submit.click(function()
 			{
+				if ($("#uid").val()=="Đang lấy Uid") {
+					alert("Hãy đợi lấy Uid xong và thử lại");
+					return false;
+				}
 				if ($("#ketqua").val()=="" || $("#url").val()=="") {
 					alert("Hãy nhập đủ thông tin");
 					return false;
