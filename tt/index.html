@@ -15,38 +15,38 @@
 			// 	$("#url").val(url);
 			// });
 
-			$("#url").change( function(){
+			// $("#url").change( function(){
 
-				$("button[type='submit']").attr("readonly", true);
-				var pastedData = $(this).val();
-				$("#uid").val("Đang lấy Uid");
-				var url = pastedData.substr(pastedData.lastIndexOf("https"));
-				$(this).val(url);
+			// 	$("button[type='submit']").attr("readonly", true);
+			// 	var pastedData = $(this).val();
+			// 	$("#uid").val("Đang lấy Uid");
+			// 	var url = pastedData.substr(pastedData.lastIndexOf("https"));
+			// 	$(this).val(url);
 
-				data = {
-					'url': url,
-				}
-				$.post("https://zhenxiang.ga/douyin/ajax", data, function(response) {
-					if ($.trim(response)) {
-						if ($.trim(response)=="NOT") {
-							alert("Không hợp lệ");
-						}
-						else{
-							$("button[type='submit']").attr("readonly", false); 
-							$("#uid").val($.trim(response));
-						}					
-					}
-				});			
-			});
+			// 	data = {
+			// 		'url': url,
+			// 	}
+			// 	$.post("https://zhenxiang.ga/douyin/ajax", data, function(response) {
+			// 		if ($.trim(response)) {
+			// 			if ($.trim(response)=="NOT") {
+			// 				alert("Không hợp lệ");
+			// 			}
+			// 			else{
+			// 				$("button[type='submit']").attr("readonly", false); 
+			// 				$("#uid").val($.trim(response));
+			// 			}					
+			// 		}
+			// 	});			
+			// });
 
 			var submit = $("button[type='submit']");
 			submit.click(function()
 			{
 
-				if ($("#uid").val()=="Đang lấy Uid") {
-					alert("Hãy đợi lấy Uid xong và thử lại");
-					return false;
-				}
+				// if ($("#uid").val()=="Đang lấy Uid") {
+				// 	alert("Hãy đợi lấy Uid xong và thử lại");
+				// 	return false;
+				// }
 				if ($("#ketqua").val()=="" || $("#url").val()=="" ) {
 					alert("Nhập thiếu thông tin");
 					return false;
@@ -98,13 +98,13 @@
 	<div id="ctn">
 		
 		<input type="hidden" id="copy">
-		<h1>Gửi thông tin</h1>
+		<p style="color: #f00; font-weight: bold;">Vì clock chặn lấy UID nên mọi người thay vì copy URL như cách cũ thì hãy hỏi lại phụ trách cách copy ID trên clock và điền vào đây</p>
 
 		<form id="form" method="GET" action="https://script.google.com/macros/s/AKfycbyRQqoluM4ddx77yT6fufZgKYpM7TVsLqFSNTYW5HBgXRjLAOQB/exec">
 			
-			<input type="text" name="url" id="url" placeholder="Link" />			
+			<input type="text" name="url" id="url" placeholder="Id" />			
 
-			<input readonly="true" type="text" name="uid" id="uid" placeholder="Uid" />
+			<!-- <input readonly="true" type="text" name="uid" id="uid" placeholder="Uid" /> -->
 
 			<select name="ketqua" id="ketqua">
 				<option value="">Chọn trạng thái</option>
