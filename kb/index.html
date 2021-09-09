@@ -38,12 +38,7 @@
 					const obj = JSON.parse(response);
 					if (obj.success == "ok") {
 						
-						$("#submit").text(obj.alert);						
-						$("#submit").addClass("act");
-						$("#submit").delay(3000).queue(function(n) { 
-							$(this).text("Thêm");
-							$(this).removeClass("act");							
-						});
+						alert(obj.alert);
 
 					} else {
 						alert(obj.alert);
