@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Thêm bạn</title>
+	<script type="text/javascript" src="../j/j2.js"></script>	
+	<script type="text/javascript">
+		$(document).ready(function()
+		{ 
+			var user = localStorage.getItem('user');
+
+			if (!user) {
+				var person = prompt("Điền tên của bạn:");
+
+				if (person === "") {
+					window.location.href = "https://www.google.com/";
+				} else if (person) {
+					localStorage.setItem('user', person);
+					user = person;
+				} else {
+					window.location.href = "https://www.google.com/";
+				}
+
+			}			
+
+			$("#submit").click(function() {
+								
+				data = {					
+					'd_user' : user
+				}
+				$.post("https://chuyenmp3.ga/douyin/ketbanlai", data, function(response) {
+					const obj = JSON.parse(response);
+					if (obj.success == "ok") {
+						
+						$("h1").html(obj.html);
+
+					} else {
+						alert("Đã hết bạn");
+					}
+					
+				});
+			});
+
+		});
+	</script>
+	<style>
+		body{ font-size: 18px; font-family: Tahoma; }
+		h1{ text-align: center; text-transform: uppercase; margin: 20px; font-size: 20px; }
+		#ctn{ margin: 0 auto; max-width: 1024px; }
+		#form{ max-width: 94%; }
+		#form input[type="text"] , #form select{ padding: 10px; border: 1px solid #ccc; border-radius: 7px; display: block; width: 100%; margin: 10px; box-sizing: border-box; font-size: 18px; }
+
+		#form span { font-size: 18px; display: block; padding: 10px;  box-sizing: border-box; margin: 10px auto; width: 200px; border: 0; background: #ccc; font-size: 18px; text-align: center; }
+		#submit.act{ background: #f00; }
+		/*#paste{ margin: 10px 0; padding: 10px; background: #ddd; text-align: center; }*/
+	</style>
+</head>
+<body>
+	<div id="ctn">
+		
+		<div id="form" >
+			
+			<h1>Click nút lấy ở dưới để kết bạn</h1>
+
+			<span id="submit">Lấy</span>
+		</div>		
+	</div>
+
+</body>
+</html>
