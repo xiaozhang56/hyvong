@@ -43,10 +43,10 @@
 			submit.click(function()
 			{
 
-				// if ($("#uid").val()=="Đang lấy Uid") {
-				// 	alert("Hãy đợi lấy Uid xong và thử lại");
-				// 	return false;
-				// }
+				if ($("#url").val().includes("http")) {
+					alert("Không nhập URL ,Hãy liên lạc lại với phụ trách để biết thêm thông tin");
+					return false;
+				}
 				if ($("#ketqua").val()=="" || $("#url").val()=="" ) {
 					alert("Nhập thiếu thông tin");
 					return false;
