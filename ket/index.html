@@ -32,7 +32,7 @@
 				$.post("https://chuyenmp3.ga/douyin/ketbanlai", data, function(response) {
 					const obj = JSON.parse(response);
 					if (obj.success == "ok") {
-						
+						alert("Đã lấy bạn mới !");
 						$("h1").html(obj.html);
 
 					} else {
