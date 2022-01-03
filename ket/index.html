@@ -29,18 +29,35 @@
 				data = {					
 					'd_user' : user
 				}
-				$.post("https://chuyenmp3.ga/douyin/ketbanlai", data, function(response) {
+				$.post("https://chuyenmp3.ga/douyin/sdt", data, function(response) {
 					const obj = JSON.parse(response);
 					if (obj.success == "ok") {
-						alert("Đã lấy bạn mới !");
+						alert("Đã lấy số mới !");
 						$("h1").html(obj.html);
 
 					} else {
-						alert("Đã hết bạn");
+						alert("Đã hết sdt");
 					}
 					
 				});
 			});
+
+
+			$(document).on("click", "h1 p" , function() { 
+				var sdt = $(this).attr("data-copy");
+				$(this).css("font-weight","bold");
+				copyToClipboard(sdt);
+
+			});
+
+				function copyToClipboard(text) {
+			var dummy = document.createElement("textarea");                
+			document.body.appendChild(dummy);                
+			dummy.value = text;
+			dummy.select();
+			document.execCommand("copy");
+			document.body.removeChild(dummy);
+		}
 
 		});
 	</script>
@@ -61,7 +78,7 @@
 		
 		<div id="form" >
 			
-			<h1>Click nút lấy ở dưới để kết bạn</h1>
+			<h1>Click nút lấy ở dưới để lay sdt</h1>
 
 			<span id="submit">Lấy</span>
 		</div>		
