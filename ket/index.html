@@ -46,6 +46,7 @@
 			$(document).on("click", "h1 p" , function() { 
 				var sdt = $(this).attr("data-copy");
 				$(this).css("font-weight","bold");
+				$(this).css("color","red");
 				copyToClipboard(sdt);
 
 			});
