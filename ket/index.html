@@ -27,7 +27,7 @@
 			$("#submit").click(function() {
 								
 				data = {					
-					'd_user' : user
+					'm_user' : user
 				}
 				$.post("https://chuyenmp3.ga/douyin/sdt", data, function(response) {
 					const obj = JSON.parse(response);
